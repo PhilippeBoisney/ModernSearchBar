@@ -1,7 +1,7 @@
 <p>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/bandeau.png"/>
 </p>
-The famous iOS searching bar with auto completion feature implemented.
+**The famous iOS searching bar with auto completion feature implemented.**
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
