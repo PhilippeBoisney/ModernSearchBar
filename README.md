@@ -31,6 +31,5 @@ pod 'ModernSearchBar'
 ## USAGE
 <p align="center">
  <h3>1 - Link it to the storyboard</h3>
- <img src ="
-https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/> 
+ <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/> 
 </p>
