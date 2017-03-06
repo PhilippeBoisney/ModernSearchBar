@@ -14,10 +14,10 @@ This searching bar will allow you to offer suggestions words to your users when 
 
 ## DEMO
 <p align="center">
- 
+ <h2>Two ways to use ModernSearchBar !</h2>
+ <h3>1 - Fill it with String</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif", height=400/>
- <h3>Fill with String...</h3>
-  
+ <h3>2 - Fill it with custon item (URL + Title)</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif", height=400/>
- <h3>or with custon item (URL + Title)</h3>
+ 
 </p>
