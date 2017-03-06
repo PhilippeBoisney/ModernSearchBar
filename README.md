@@ -14,6 +14,9 @@ This searching bar will allow you to offer suggestions words to your users when 
 
 ## DEMO
 <p align="center">
- <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif", height=200, align="left"/>
- <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif", height=200/>
+ 
+ <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif", width=200/>
+  <h1>With list of custom object (title + url)</h1>
+ <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif", width=200, align="left"/>
+ <h1>With list of String</h1>
 </p>
