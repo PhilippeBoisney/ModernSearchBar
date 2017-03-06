@@ -15,8 +15,11 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.makingSearchBarAwesome()
-        self.configureSearchBar()
-        //self.configureSearchBarWithUrl()
+        
+        ///Uncomment this one...
+        //self.configureSearchBar()
+        ///... or uncomment this one ! (but you can't uncomment both)
+        self.configureSearchBarWithUrl()
         
     }
     
@@ -80,12 +83,12 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
         
         ///Create array of ModernSearchBarModel containing a title and a url
         var suggestionListWithUrl = Array<ModernSearchBarModel>()
-        suggestionListWithUrl.append(ModernSearchBarModel(title: "Apple iMac", url: "http://images.apple.com/v/imac/d/images/overview/performance_medium.jpg"))
-        suggestionListWithUrl.append(ModernSearchBarModel(title: "Apple accessories", url: "http://images.apple.com/v/imac/d/images/overview/accessories_medium_2x.jpg"))
-        suggestionListWithUrl.append(ModernSearchBarModel(title: "Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote.", url: "http://images.apple.com/v/imac/d/images/overview/built_in_apps_macos_medium_2x.jpg"))
-        suggestionListWithUrl.append(ModernSearchBarModel(title: "Apple Pay", url: "http://images.apple.com/v/apple-pay/f/images/overview/stores_medium_2x.jpg"))
-        suggestionListWithUrl.append(ModernSearchBarModel(title: "Apple iPad", url: "http://images.apple.com/v/apple-pay/f/images/overview/apps_medium_2x.jpg"))
-        suggestionListWithUrl.append(ModernSearchBarModel(title: "All our products (if you are very rich)", url: "http://images.apple.com/v/apple-pay/f/images/overview/web_medium_2x.jpg"))
+        suggestionListWithUrl.append(ModernSearchBarModel(title: "Alpha", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleA.png"))
+        suggestionListWithUrl.append(ModernSearchBarModel(title: "Bravo", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleB.png"))
+        suggestionListWithUrl.append(ModernSearchBarModel(title: "Charlie ? Well, just a long sentence to show you how powerful is this lib...", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleC.png"))
+        suggestionListWithUrl.append(ModernSearchBarModel(title: "Delta", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleD.png"))
+        suggestionListWithUrl.append(ModernSearchBarModel(title: "Echo", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleE.png"))
+        suggestionListWithUrl.append(ModernSearchBarModel(title: "Golf", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleG.png"))
         
         
         ///Adding delegate
@@ -94,8 +97,12 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
         ///Set datas to search bar
         self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
         
+        ///Increase size of suggestionsView icon
+        self.modernSearchBar.suggestionsView_searchIcon_height = 40
+        self.modernSearchBar.suggestionsView_searchIcon_width = 40
+        
         ///Custom design with all paramaters
-        self.customDesign()
+        //self.customDesign()
         
     }
     
