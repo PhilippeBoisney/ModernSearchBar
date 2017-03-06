@@ -14,6 +14,7 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.makingSearchBarAwesome()
         self.configureSearchBar()
         //self.configureSearchBarWithUrl()
         
@@ -129,6 +130,12 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
          self.modernSearchBar.suggestionsView_searchIcon_isRound = false
          
          */
+    }
+    
+    private func makingSearchBarAwesome(){
+        self.modernSearchBar.backgroundImage = UIImage()
+        self.modernSearchBar.layer.borderWidth = 0
+        self.modernSearchBar.layer.borderColor = UIColor(red: 181, green: 240, blue: 210, alpha: 1).cgColor
     }
     
 }
