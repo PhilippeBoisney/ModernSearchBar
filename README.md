@@ -14,9 +14,9 @@ This searching bar will allow you to offer suggestions words to your users when 
 
 ## DEMO (Two ways to use ModernSearchBar)
 <p align="center">
- <h3>1 - Fill it with String</h3>
+ <h3>1 - With String</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif", height=300/>
- <h3>2 - Fill it with custon item (URL + Title)</h3>
+ <h3>2 - With custon item (URL + Title)</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif", height=300/>
  
 </p>
@@ -29,11 +29,11 @@ pod 'ModernSearchBar'
 
 
 ## USAGE
-####1 - Link it to the storyboard
+####1 - Set custom class with ModernSearchBar
 <p align="center">
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/> 
 </p>
-####2 - Link it to your ViewController
+####2 - Create an outlet to your ViewController
 ```swift
  @IBOutlet weak var modernSearchBar: ModernSearchBar!
  ```
@@ -41,7 +41,7 @@ pod 'ModernSearchBar'
  ```swift
  self.modernSearchBar.delegateModernSearchBar = self
  ```
-####4 - Set datas (Way 1 => String list)
+####4 - Set datas (Way 1: With String array)
  ```swift
  ///Create array of string
  var suggestionList = Array<String>()
@@ -51,7 +51,7 @@ pod 'ModernSearchBar'
  //Fill the searchbar
  self.modernSearchBar.setDatas(datas: suggestionList)
  ```
-####5 - Set datas (Way 2 => Custom item)
+####5 - Set datas (Way 2: With custom item array)
  ```swift
  ///Create array of ModernSearchBarModel containing a title and a url
  var suggestionListWithUrl = Array<ModernSearchBarModel>()
