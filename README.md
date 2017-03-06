@@ -53,7 +53,7 @@ pod 'ModernSearchBar'
  //Fill the searchbar
  self.modernSearchBar.setDatas(datas: suggestionList)
  ```
-####5 - Set datas (Way 2: With custom item array)
+####4 bis - Set datas (Way 2: With custom item array)
  ```swift
  ///Create array of ModernSearchBarModel containing a title and a url
  var suggestionListWithUrl = Array<ModernSearchBarModel>()
