@@ -29,15 +29,15 @@ pod 'ModernSearchBar'
 
 
 ## USAGE
+####1 - Link it to the storyboard
 <p align="center">
- <h3>1 - Link it to the storyboard</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/> 
 </p>
 ####2 - Link it to your ViewController
 ```swift
  @IBOutlet weak var modernSearchBar: ModernSearchBar!
  ```
- ####3 - Set delegate
+####3 - Set delegate
  ```swift
  self.modernSearchBar.delegateModernSearchBar = self
  ```
