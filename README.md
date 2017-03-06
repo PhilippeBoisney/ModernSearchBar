@@ -61,4 +61,30 @@ pod 'ModernSearchBar'
  //Fill the searchbar
  self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
  ```
- 
+ **CUSTOMIZING**
+ ```swift
+  self.modernSearchBar.shadowView_alpha = 0.8
+         
+  self.modernSearchBar.searchImage = ModernSearchBarIcon.Icon.none.image
+
+  self.modernSearchBar.searchLabel_font = UIFont(name: "Avenir-Light", size: 30)
+  self.modernSearchBar.searchLabel_textColor = UIColor.red
+  self.modernSearchBar.searchLabel_backgroundColor = UIColor.black
+
+  self.modernSearchBar.suggestionsView_maxHeight = 1000
+  self.modernSearchBar.suggestionsView_backgroundColor = UIColor.brown
+  self.modernSearchBar.suggestionsView_contentViewColor = UIColor.yellow
+  self.modernSearchBar.suggestionsView_separatorStyle = .singleLine
+  self.modernSearchBar.suggestionsView_selectionStyle = UITableViewCellSelectionStyle.gray
+
+  self.modernSearchBar.suggestionsView_searchIcon_height = 40
+  self.modernSearchBar.suggestionsView_searchIcon_width = 40
+  self.modernSearchBar.suggestionsView_searchIcon_isRound = false
+
+  ```
+  
+ ## Version
+1.0
+
+## Author
+Philippe BOISNEY (phil.boisney(@)gmail.com)
