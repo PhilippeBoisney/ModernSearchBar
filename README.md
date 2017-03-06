@@ -83,7 +83,7 @@ pod 'ModernSearchBar'
 
   ```
   
- ## Version
+## Version
 1.0
 
 ## Author
