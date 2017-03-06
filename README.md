@@ -1,5 +1,5 @@
-<p align="center">
- <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/bandeau.png", align="center"/>
+<p>
+ <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/bandeau.png"/>
 </p>
 The famous iOS searching bar with auto completion feature implemented.
 
