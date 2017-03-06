@@ -117,24 +117,30 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
         // --------------------------
         
         /*
-         
+         //Modify shadows alpha
          self.modernSearchBar.shadowView_alpha = 0.8
          
+         //Modify the default icon of suggestionsView's rows
          self.modernSearchBar.searchImage = ModernSearchBarIcon.Icon.none.image
          
+         //Modify properties of the searchLabel
          self.modernSearchBar.searchLabel_font = UIFont(name: "Avenir-Light", size: 30)
          self.modernSearchBar.searchLabel_textColor = UIColor.red
          self.modernSearchBar.searchLabel_backgroundColor = UIColor.black
          
+         //Modify properties of the searchIcon
+         self.modernSearchBar.suggestionsView_searchIcon_height = 40
+         self.modernSearchBar.suggestionsView_searchIcon_width = 40
+         self.modernSearchBar.suggestionsView_searchIcon_isRound = false
+         
+         //Modify properties of suggestionsView
+         ///Modify the max height of the suggestionsView
          self.modernSearchBar.suggestionsView_maxHeight = 1000
+         ///Modify properties of the suggestionsView
          self.modernSearchBar.suggestionsView_backgroundColor = UIColor.brown
          self.modernSearchBar.suggestionsView_contentViewColor = UIColor.yellow
          self.modernSearchBar.suggestionsView_separatorStyle = .singleLine
          self.modernSearchBar.suggestionsView_selectionStyle = UITableViewCellSelectionStyle.gray
-         
-         self.modernSearchBar.suggestionsView_searchIcon_height = 40
-         self.modernSearchBar.suggestionsView_searchIcon_width = 40
-         self.modernSearchBar.suggestionsView_searchIcon_isRound = false
          
          */
     }
