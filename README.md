@@ -41,5 +41,24 @@ pod 'ModernSearchBar'
  ```swift
  self.modernSearchBar.delegateModernSearchBar = self
  ```
+####4 - Set datas (Way 1 => String list)
+ ```swift
+ ///Create array of string
+ var suggestionList = Array<String>()
+ suggestionList.append("Onions")
+ suggestionList.append("Celery")
  
+ //Fill the searchbar
+ self.modernSearchBar.setDatas(datas: suggestionList)
+ ```
+####5 - Set datas (Way 2 => Custom item)
+ ```swift
+ ///Create array of ModernSearchBarModel containing a title and a url
+ var suggestionListWithUrl = Array<ModernSearchBarModel>()
+ suggestionListWithUrl.append(ModernSearchBarModel(title: "Alpha", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleA.png"))
+ suggestionListWithUrl.append(ModernSearchBarModel(title: "Bravo", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleB.png"))
+ 
+ //Fill the searchbar
+ self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
+ ```
  
