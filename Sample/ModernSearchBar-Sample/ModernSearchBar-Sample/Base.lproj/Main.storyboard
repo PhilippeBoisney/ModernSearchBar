@@ -12,7 +12,7 @@
         <!--Title-->
         <scene sceneID="mDF-ji-lRF">
             <objects>
-                <viewController id="18h-a0-tm2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="18h-a0-tm2" customClass="ViewController" customModule="ModernSearchBar_Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QHO-Gg-Ua0"/>
                         <viewControllerLayoutGuide type="bottom" id="b8f-jW-h8b"/>
@@ -41,7 +41,7 @@
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" placeholder="Search something really cool..." translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Dq-YVF" customClass="ModernSearchBar">
+                            <searchBar contentMode="redraw" placeholder="Search something really cool..." translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Dq-YVF" customClass="ModernSearchBar" customModule="ModernSearchBar">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
