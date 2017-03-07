@@ -296,13 +296,24 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // SUGGESTIONS VIEW UTILS
     // --------------------------------
     
+    private func haveToOpenSuggestionView() -> Bool {
+        switch self.choice {
+        case .normal:
+            return !self.suggestionListFiltred.isEmpty
+        case .withUrl:
+            return !self.suggestionListWithUrlFiltred.isEmpty
+        }
+    }
+    
     private func openSuggestionsView(){
-        if (!self.isSuggestionsViewOpened){
-            self.animationOpening()
-            
-            self.addViewToParent(view: self.suggestionsShadow)
-            self.addViewToParent(view: self.suggestionsView)
-            self.isSuggestionsViewOpened = true
+        if (self.haveToOpenSuggestionView()){
+            if (!self.isSuggestionsViewOpened){
+                self.animationOpening()
+                
+                self.addViewToParent(view: self.suggestionsShadow)
+                self.addViewToParent(view: self.suggestionsView)
+                self.isSuggestionsViewOpened = true
+            }
         }
     }
     
