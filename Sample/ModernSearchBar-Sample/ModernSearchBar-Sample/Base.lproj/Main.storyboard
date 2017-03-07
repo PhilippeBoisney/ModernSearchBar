@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="18h-a0-tm2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="mDF-ji-lRF">
+            <objects>
+                <viewController id="18h-a0-tm2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QHO-Gg-Ua0"/>
+                        <viewControllerLayoutGuide type="bottom" id="b8f-jW-h8b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Yo-lO-hDj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-N7-RtG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="wnV-NZ-4lR"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ModernSearchBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvJ-8I-fPm">
+                                <rect key="frame" x="98" y="319" width="178.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The famous iOS searching bar with auto completion feature implemented" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9d-Q1-Zkn">
+                                <rect key="frame" x="10" y="363" width="355" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Search something really cool..." translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-Dq-YVF" customClass="ModernSearchBar">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.85098039219999999" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tAd-N7-RtG" firstAttribute="leading" secondItem="2Yo-lO-hDj" secondAttribute="leading" id="65j-pc-xNV"/>
+                            <constraint firstAttribute="trailing" secondItem="m9d-Q1-Zkn" secondAttribute="trailing" constant="10" id="6fS-2V-rol"/>
+                            <constraint firstItem="mvJ-8I-fPm" firstAttribute="centerX" secondItem="2Yo-lO-hDj" secondAttribute="centerX" id="7Zf-3T-TuZ"/>
+                            <constraint firstItem="m9d-Q1-Zkn" firstAttribute="leading" secondItem="2Yo-lO-hDj" secondAttribute="leading" constant="10" id="92i-Ka-UT7"/>
+                            <constraint firstItem="m9d-Q1-Zkn" firstAttribute="top" secondItem="mvJ-8I-fPm" secondAttribute="bottom" constant="15" id="EMZ-ov-Qru"/>
+                            <constraint firstItem="2Wf-Dq-YVF" firstAttribute="top" secondItem="tAd-N7-RtG" secondAttribute="bottom" id="GvF-90-GFt"/>
+                            <constraint firstItem="tAd-N7-RtG" firstAttribute="top" secondItem="2Yo-lO-hDj" secondAttribute="top" id="MpZ-St-P1l"/>
+                            <constraint firstItem="mvJ-8I-fPm" firstAttribute="centerY" secondItem="2Yo-lO-hDj" secondAttribute="centerY" id="NOO-6a-kpo"/>
+                            <constraint firstItem="m9d-Q1-Zkn" firstAttribute="centerX" secondItem="2Yo-lO-hDj" secondAttribute="centerX" id="X0b-VJ-1Wf"/>
+                            <constraint firstAttribute="trailing" secondItem="2Wf-Dq-YVF" secondAttribute="trailing" id="hJG-Z0-wOy"/>
+                            <constraint firstAttribute="trailing" secondItem="tAd-N7-RtG" secondAttribute="trailing" id="w0B-aq-Hxa"/>
+                            <constraint firstItem="2Wf-Dq-YVF" firstAttribute="leading" secondItem="2Yo-lO-hDj" secondAttribute="leading" id="x9F-Ip-RKt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="BOR-PZ-F9G"/>
+                    <connections>
+                        <outlet property="modernSearchBar" destination="2Wf-Dq-YVF" id="Bkd-iz-Q3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3h8-0n-ggy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+</document>

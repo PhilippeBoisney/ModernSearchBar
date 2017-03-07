@@ -11,11 +11,11 @@ import UIKit
 
 public class ModernSearchBarIcon : NSObject {
     
-    enum Icon {
+    public enum Icon {
         case search
         case none
         
-        var image: UIImage {
+        public var image: UIImage {
             switch self {
                 case .none: return UIImage()
                 case .search: return UIImage(named: "search")!               

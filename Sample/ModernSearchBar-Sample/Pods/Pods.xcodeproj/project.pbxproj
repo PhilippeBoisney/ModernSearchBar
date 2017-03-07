@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09B91BB8E452D2BBB0593637F372F4E7 /* ModernSearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5216D2EC667309DB6270B929B22D2B9 /* ModernSearchBarCell.swift */; };
+		0C466BAAA29DDF209A3C9B7417F36D21 /* ModernSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BA0E93C9BDDBC65FE03B141642263 /* ModernSearchBarDelegate.swift */; };
+		482FB5C646E6B4E49336B394085CE2D0 /* ModernSearchBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AD5AD1E74BEA61FAB488248F029DEE /* ModernSearchBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C0C5AAEFF5030B08FE60129FC8F4314 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		53EAEE5B187CD6E6234CD78660DB10AC /* ModernSearchBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A5F55622BE20D6E032BE5C701833F5 /* ModernSearchBar-dummy.m */; };
+		5DE69AEDA157A8C9164A2A17389A320E /* ModernSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ACB07A7E70187E92A79D3A32B0AA1 /* ModernSearchBar.swift */; };
+		66A034919311DADF75BBB40E3730A691 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		711D5CEE90A15A541355BFBFD07535F7 /* ModernSearchBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D73A5B0166A0BCEB7FDE80FCC31D8 /* ModernSearchBarIcon.swift */; };
+		8688A8B7577015546876E81A2F331095 /* Pods-ModernSearchBar-Sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A008131ABA8B2462B56A86075C0A31 /* Pods-ModernSearchBar-Sample-dummy.m */; };
+		9AD3C2BC6935DD9AA6596F533E81C692 /* ModernSearchBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 949C84A567BAE93F2C887C62840AB25A /* ModernSearchBar.bundle */; };
+		A266F9CE9D03AB690F5DEC496CB58AE4 /* ModernSearchBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E44939A240A9A9B3E85CCF2174270DC /* ModernSearchBarModel.swift */; };
+		CC1792EC4C09C0E9754B864DF7299D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2951F94A8E0C5C7FBD55FA0ADE846331 /* Assets.xcassets */; };
+		EDB8D680AB434834D6E6048C0E981F58 /* Pods-ModernSearchBar-Sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC94436F2BFA352B0174D625B64A3B43 /* Pods-ModernSearchBar-Sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9BE0C0DCCF887B6C27FBDD7CF037C8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3947CFF5C2B3AE8B6E09B96A5789E59E;
+			remoteInfo = ModernSearchBar;
+		};
+		D64E642622A3A804530F1E280D7118FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD7B8AF641D66E0D60F5040F37607DA;
+			remoteInfo = "ModernSearchBar-ModernSearchBar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0624C1A93A9299D666B5C12EE5B2B14F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD96B520E61129B0FB5727D88B2D962 /* Pods-ModernSearchBar-Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ModernSearchBar-Sample-resources.sh"; sourceTree = "<group>"; };
+		1E44939A240A9A9B3E85CCF2174270DC /* ModernSearchBarModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernSearchBarModel.swift; path = Pod/Classes/ModernSearchBarModel.swift; sourceTree = "<group>"; };
+		2951F94A8E0C5C7FBD55FA0ADE846331 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Pod/Assets.xcassets; sourceTree = "<group>"; };
+		2F10E70685226DC581E85A691C682877 /* Pods-ModernSearchBar-Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ModernSearchBar-Sample-acknowledgements.plist"; sourceTree = "<group>"; };
+		36E6E659DE6E2F88AB2A62B69D6ACF5D /* Pods-ModernSearchBar-Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ModernSearchBar-Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3D19B38FC1B71EF55B9D0E25DCA482A2 /* ModernSearchBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ModernSearchBar-prefix.pch"; sourceTree = "<group>"; };
+		4AF508075BB432F19B72FED33FA15F52 /* ModernSearchBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ModernSearchBar.xcconfig; sourceTree = "<group>"; };
+		722D43F36203593F7D59C04A1AC81D99 /* Pods-ModernSearchBar-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ModernSearchBar-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		77AD5AD1E74BEA61FAB488248F029DEE /* ModernSearchBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ModernSearchBar-umbrella.h"; sourceTree = "<group>"; };
+		80001B59F58714143F3D5028A79A384E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		913BAD0C20035B4CFB260B41F75359C1 /* ModernSearchBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ModernSearchBar.framework; path = ModernSearchBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949C84A567BAE93F2C887C62840AB25A /* ModernSearchBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ModernSearchBar.bundle; path = ModernSearchBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		989DEC3F17D73368745A535E41B50294 /* Pods-ModernSearchBar-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ModernSearchBar-Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		98DB72D4210F209EB887E087E27C60CD /* Pods-ModernSearchBar-Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ModernSearchBar-Sample-frameworks.sh"; sourceTree = "<group>"; };
+		9939CE2855CF9F667F3924F9F0258655 /* ResourceBundle-ModernSearchBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ModernSearchBar-Info.plist"; sourceTree = "<group>"; };
+		A1A5F55622BE20D6E032BE5C701833F5 /* ModernSearchBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ModernSearchBar-dummy.m"; sourceTree = "<group>"; };
+		B04D73A5B0166A0BCEB7FDE80FCC31D8 /* ModernSearchBarIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernSearchBarIcon.swift; path = Pod/Classes/ModernSearchBarIcon.swift; sourceTree = "<group>"; };
+		B5216D2EC667309DB6270B929B22D2B9 /* ModernSearchBarCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernSearchBarCell.swift; path = Pod/Classes/ModernSearchBarCell.swift; sourceTree = "<group>"; };
+		B902C382426F99B940CB5C63B13A2DCD /* ModernSearchBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ModernSearchBar.modulemap; sourceTree = "<group>"; };
+		BD4BA0E93C9BDDBC65FE03B141642263 /* ModernSearchBarDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernSearchBarDelegate.swift; path = Pod/Classes/ModernSearchBarDelegate.swift; sourceTree = "<group>"; };
+		C1CCCCC80C43234526420EEC17590426 /* Pods-ModernSearchBar-Sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ModernSearchBar-Sample.modulemap"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E2A008131ABA8B2462B56A86075C0A31 /* Pods-ModernSearchBar-Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ModernSearchBar-Sample-dummy.m"; sourceTree = "<group>"; };
+		E4A2519DEA62A3189EE13330B4FD9AC1 /* Pods_ModernSearchBar_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ModernSearchBar_Sample.framework; path = "Pods-ModernSearchBar-Sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33ACB07A7E70187E92A79D3A32B0AA1 /* ModernSearchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernSearchBar.swift; path = Pod/Classes/ModernSearchBar.swift; sourceTree = "<group>"; };
+		FC94436F2BFA352B0174D625B64A3B43 /* Pods-ModernSearchBar-Sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ModernSearchBar-Sample-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42359C29A5D82D3915667B4B44DE8BA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E02270212426D30766852B9CAC35D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A034919311DADF75BBB40E3730A691 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B0F852F468F4C9B28BE6C9431A43D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0C5AAEFF5030B08FE60129FC8F4314 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C925B174159E1F740DE4177742596D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				949C84A567BAE93F2C887C62840AB25A /* ModernSearchBar.bundle */,
+				913BAD0C20035B4CFB260B41F75359C1 /* ModernSearchBar.framework */,
+				E4A2519DEA62A3189EE13330B4FD9AC1 /* Pods_ModernSearchBar_Sample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53AA079A6844303DEF8EA4183A7D1927 /* ModernSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				F33ACB07A7E70187E92A79D3A32B0AA1 /* ModernSearchBar.swift */,
+				B5216D2EC667309DB6270B929B22D2B9 /* ModernSearchBarCell.swift */,
+				BD4BA0E93C9BDDBC65FE03B141642263 /* ModernSearchBarDelegate.swift */,
+				B04D73A5B0166A0BCEB7FDE80FCC31D8 /* ModernSearchBarIcon.swift */,
+				1E44939A240A9A9B3E85CCF2174270DC /* ModernSearchBarModel.swift */,
+				744E5339C9D1B714981929690EB293B7 /* Resources */,
+				ED65527CEF3154A921B400099161E376 /* Support Files */,
+			);
+			name = ModernSearchBar;
+			path = ModernSearchBar;
+			sourceTree = "<group>";
+		};
+		563EEF7CC4FA259200D5DCAA18EDE56C /* Pods-ModernSearchBar-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				80001B59F58714143F3D5028A79A384E /* Info.plist */,
+				C1CCCCC80C43234526420EEC17590426 /* Pods-ModernSearchBar-Sample.modulemap */,
+				36E6E659DE6E2F88AB2A62B69D6ACF5D /* Pods-ModernSearchBar-Sample-acknowledgements.markdown */,
+				2F10E70685226DC581E85A691C682877 /* Pods-ModernSearchBar-Sample-acknowledgements.plist */,
+				E2A008131ABA8B2462B56A86075C0A31 /* Pods-ModernSearchBar-Sample-dummy.m */,
+				98DB72D4210F209EB887E087E27C60CD /* Pods-ModernSearchBar-Sample-frameworks.sh */,
+				1BD96B520E61129B0FB5727D88B2D962 /* Pods-ModernSearchBar-Sample-resources.sh */,
+				FC94436F2BFA352B0174D625B64A3B43 /* Pods-ModernSearchBar-Sample-umbrella.h */,
+				989DEC3F17D73368745A535E41B50294 /* Pods-ModernSearchBar-Sample.debug.xcconfig */,
+				722D43F36203593F7D59C04A1AC81D99 /* Pods-ModernSearchBar-Sample.release.xcconfig */,
+			);
+			name = "Pods-ModernSearchBar-Sample";
+			path = "Target Support Files/Pods-ModernSearchBar-Sample";
+			sourceTree = "<group>";
+		};
+		642E3284722E02B2C05D63BF3B658990 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53AA079A6844303DEF8EA4183A7D1927 /* ModernSearchBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		744E5339C9D1B714981929690EB293B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2951F94A8E0C5C7FBD55FA0ADE846331 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				642E3284722E02B2C05D63BF3B658990 /* Pods */,
+				07C925B174159E1F740DE4177742596D /* Products */,
+				EC8EBA2DE53760AAAE56E5D297BB7D9B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC8EBA2DE53760AAAE56E5D297BB7D9B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				563EEF7CC4FA259200D5DCAA18EDE56C /* Pods-ModernSearchBar-Sample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ED65527CEF3154A921B400099161E376 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0624C1A93A9299D666B5C12EE5B2B14F /* Info.plist */,
+				B902C382426F99B940CB5C63B13A2DCD /* ModernSearchBar.modulemap */,
+				4AF508075BB432F19B72FED33FA15F52 /* ModernSearchBar.xcconfig */,
+				A1A5F55622BE20D6E032BE5C701833F5 /* ModernSearchBar-dummy.m */,
+				3D19B38FC1B71EF55B9D0E25DCA482A2 /* ModernSearchBar-prefix.pch */,
+				77AD5AD1E74BEA61FAB488248F029DEE /* ModernSearchBar-umbrella.h */,
+				9939CE2855CF9F667F3924F9F0258655 /* ResourceBundle-ModernSearchBar-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ModernSearchBar";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		25A8C4534C54F75F354A13C4488100A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482FB5C646E6B4E49336B394085CE2D0 /* ModernSearchBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A821E09C03F7B4AFE201F76CE2BB54C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB8D680AB434834D6E6048C0E981F58 /* Pods-ModernSearchBar-Sample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3947CFF5C2B3AE8B6E09B96A5789E59E /* ModernSearchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554A48D5F9F79C38CF8986B9A13106B1 /* Build configuration list for PBXNativeTarget "ModernSearchBar" */;
+			buildPhases = (
+				646FC39744309060DCF713C303B15FDA /* Sources */,
+				87E02270212426D30766852B9CAC35D2 /* Frameworks */,
+				CB303A2AAB36CE89B70923F871856F34 /* Resources */,
+				25A8C4534C54F75F354A13C4488100A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12B5FEAC3003A1E9B16481BBB47FC7D1 /* PBXTargetDependency */,
+			);
+			name = ModernSearchBar;
+			productName = ModernSearchBar;
+			productReference = 913BAD0C20035B4CFB260B41F75359C1 /* ModernSearchBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5AD7B8AF641D66E0D60F5040F37607DA /* ModernSearchBar-ModernSearchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F998D847C43ABA6760F559C425CF26CD /* Build configuration list for PBXNativeTarget "ModernSearchBar-ModernSearchBar" */;
+			buildPhases = (
+				6153896BC4140EB9D0C6AD3C3ADEB9CF /* Sources */,
+				42359C29A5D82D3915667B4B44DE8BA7 /* Frameworks */,
+				E0B6FE78F3454C779FEE275E892DA196 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ModernSearchBar-ModernSearchBar";
+			productName = "ModernSearchBar-ModernSearchBar";
+			productReference = 949C84A567BAE93F2C887C62840AB25A /* ModernSearchBar.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		631325BCCED1F27B69DEFAF0349D1EA8 /* Pods-ModernSearchBar-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2F86A2FA1015BEFEDA5191BC3D2E8EF /* Build configuration list for PBXNativeTarget "Pods-ModernSearchBar-Sample" */;
+			buildPhases = (
+				0F983313FBAE12A838103924E6059FD9 /* Sources */,
+				C6B0F852F468F4C9B28BE6C9431A43D8 /* Frameworks */,
+				7A821E09C03F7B4AFE201F76CE2BB54C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6A7B661161EBD3C4667F2C32405EE63 /* PBXTargetDependency */,
+			);
+			name = "Pods-ModernSearchBar-Sample";
+			productName = "Pods-ModernSearchBar-Sample";
+			productReference = E4A2519DEA62A3189EE13330B4FD9AC1 /* Pods_ModernSearchBar_Sample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 07C925B174159E1F740DE4177742596D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3947CFF5C2B3AE8B6E09B96A5789E59E /* ModernSearchBar */,
+				5AD7B8AF641D66E0D60F5040F37607DA /* ModernSearchBar-ModernSearchBar */,
+				631325BCCED1F27B69DEFAF0349D1EA8 /* Pods-ModernSearchBar-Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB303A2AAB36CE89B70923F871856F34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AD3C2BC6935DD9AA6596F533E81C692 /* ModernSearchBar.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0B6FE78F3454C779FEE275E892DA196 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC1792EC4C09C0E9754B864DF7299D66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F983313FBAE12A838103924E6059FD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8688A8B7577015546876E81A2F331095 /* Pods-ModernSearchBar-Sample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6153896BC4140EB9D0C6AD3C3ADEB9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		646FC39744309060DCF713C303B15FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EAEE5B187CD6E6234CD78660DB10AC /* ModernSearchBar-dummy.m in Sources */,
+				5DE69AEDA157A8C9164A2A17389A320E /* ModernSearchBar.swift in Sources */,
+				09B91BB8E452D2BBB0593637F372F4E7 /* ModernSearchBarCell.swift in Sources */,
+				0C466BAAA29DDF209A3C9B7417F36D21 /* ModernSearchBarDelegate.swift in Sources */,
+				711D5CEE90A15A541355BFBFD07535F7 /* ModernSearchBarIcon.swift in Sources */,
+				A266F9CE9D03AB690F5DEC496CB58AE4 /* ModernSearchBarModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12B5FEAC3003A1E9B16481BBB47FC7D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ModernSearchBar-ModernSearchBar";
+			target = 5AD7B8AF641D66E0D60F5040F37607DA /* ModernSearchBar-ModernSearchBar */;
+			targetProxy = D64E642622A3A804530F1E280D7118FA /* PBXContainerItemProxy */;
+		};
+		B6A7B661161EBD3C4667F2C32405EE63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ModernSearchBar;
+			target = 3947CFF5C2B3AE8B6E09B96A5789E59E /* ModernSearchBar */;
+			targetProxy = A9BE0C0DCCF887B6C27FBDD7CF037C8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		159887DC356BD4AA55883AEC37814C54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 722D43F36203593F7D59C04A1AC81D99 /* Pods-ModernSearchBar-Sample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ModernSearchBar-Sample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ModernSearchBar-Sample/Pods-ModernSearchBar-Sample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ModernSearchBar_Sample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		30AAD52E75A2119527C48AD4A6178444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 989DEC3F17D73368745A535E41B50294 /* Pods-ModernSearchBar-Sample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ModernSearchBar-Sample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ModernSearchBar-Sample/Pods-ModernSearchBar-Sample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ModernSearchBar_Sample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3F0E7B043B7B7AD90D346D1C52F2C18A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF508075BB432F19B72FED33FA15F52 /* ModernSearchBar.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ModernSearchBar";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/ModernSearchBar/ResourceBundle-ModernSearchBar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = ModernSearchBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		42952167BF5D4F993E1AB71AB0543270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF508075BB432F19B72FED33FA15F52 /* ModernSearchBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ModernSearchBar/ModernSearchBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ModernSearchBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ModernSearchBar/ModernSearchBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ModernSearchBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A3BBC803879A33BC34FCBF0F42F6DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF508075BB432F19B72FED33FA15F52 /* ModernSearchBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ModernSearchBar/ModernSearchBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ModernSearchBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ModernSearchBar/ModernSearchBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ModernSearchBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE1FF8696247B9041AE9892B52A39AF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF508075BB432F19B72FED33FA15F52 /* ModernSearchBar.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ModernSearchBar";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/ModernSearchBar/ResourceBundle-ModernSearchBar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = ModernSearchBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
+				156284431C64CB05C59BDA0595A1E95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		554A48D5F9F79C38CF8986B9A13106B1 /* Build configuration list for PBXNativeTarget "ModernSearchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3BBC803879A33BC34FCBF0F42F6DD8 /* Debug */,
+				42952167BF5D4F993E1AB71AB0543270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2F86A2FA1015BEFEDA5191BC3D2E8EF /* Build configuration list for PBXNativeTarget "Pods-ModernSearchBar-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30AAD52E75A2119527C48AD4A6178444 /* Debug */,
+				159887DC356BD4AA55883AEC37814C54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F998D847C43ABA6760F559C425CF26CD /* Build configuration list for PBXNativeTarget "ModernSearchBar-ModernSearchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0E7B043B7B7AD90D346D1C52F2C18A /* Debug */,
+				AE1FF8696247B9041AE9892B52A39AF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

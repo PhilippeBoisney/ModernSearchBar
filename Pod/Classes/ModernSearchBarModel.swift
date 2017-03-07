@@ -10,9 +10,9 @@ import UIKit
 
 public class ModernSearchBarModel: NSObject {
     
-    var title: String!
-    var url: URL!
-    var imgCache: UIImage!
+    public var title: String!
+    public var url: URL!
+    public var imgCache: UIImage!
     
     public init(title: String, url: String) {
         super.init()
