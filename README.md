@@ -17,9 +17,9 @@ This search bar will allow you to offer suggestions words to your users when the
 ## DEMO
 ### Two ways to use this lib
 <p align="center">
- <h3>1 - With Array&#60;String&#62;</h3>
+ <h3>1 - DEFAULT: With Array&#60;String&#62;</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif", height=300/>
- <h3>2 - With Array&#60;ModernSearchBarModel&#62;</h3>
+ <h3>2 - ADVANCED: With Array&#60;ModernSearchBarModel&#62;</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif", height=300/>
 
 </p>
