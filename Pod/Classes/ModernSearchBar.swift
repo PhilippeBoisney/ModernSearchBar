@@ -125,7 +125,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // DELEGATE METHODS SEARCH BAR
     // --------------------------------
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             self.closeSuggestionsView()
         } else {
@@ -135,23 +135,23 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.delegateModernSearchBar?.searchBar?(searchBar, textDidChange: searchText)
     }
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         if self.suggestionsView == nil { self.configureViews() }
         self.delegateModernSearchBar?.searchBarTextDidEndEditing?(searchBar)
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarTextDidEndEditing?(searchBar)
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarSearchButtonClicked?(searchBar)
         self.endEditing(true)
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarCancelButtonClicked?(searchBar)
         self.endEditing(true)
@@ -177,7 +177,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // DELEGATE METHODS TABLE VIEW
     // --------------------------------
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.choice {
         case .normal:
             return self.suggestionListFiltred.count
@@ -186,7 +186,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:ModernSearchBarCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ModernSearchBarCell
         
@@ -225,7 +225,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch self.choice {
         case .normal:
             self.delegateModernSearchBar?.onClickItemSuggestionsView?(item: self.suggestionListFiltred[indexPath.row])
@@ -419,7 +419,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.getEditText().addObserver(self, forKeyPath: "frame", options: NSKeyValueObservingOptions(rawValue: 0), context: nil)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (keyPath == "frame"){
             self.closeSuggestionsView()
             self.configureViews()
