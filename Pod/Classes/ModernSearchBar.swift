@@ -48,6 +48,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     public var suggestionsView_contentViewColor: UIColor?
     public var suggestionsView_separatorStyle: UITableViewCellSeparatorStyle = .none
     public var suggestionsView_selectionStyle: UITableViewCellSelectionStyle = UITableViewCellSelectionStyle.none
+    public var suggestionsView_verticalSpaceWithSearchBar: CGFloat = 4
     
     public var suggestionsView_searchIcon_height: CGFloat = 17
     public var suggestionsView_searchIcon_width: CGFloat = 17
@@ -126,12 +127,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // --------------------------------
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            self.closeSuggestionsView()
-        } else {
-            self.searchWhenUserTyping(caracters: searchText)
-            self.openSuggestionsView()
-        }
+        self.searchWhenUserTyping(caracters: searchText)
         self.delegateModernSearchBar?.searchBar?(searchBar, textDidChange: searchText)
     }
     
@@ -256,7 +252,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
                 DispatchQueue.main.async {
                     self.suggestionListFiltred.removeAll()
                     self.suggestionListFiltred.append(contentsOf: suggestionListFiltredTmp)
-                    self.updateAfterSearch()
+                    self.updateAfterSearch(caracters: caracters)
                 }
             }
             
@@ -275,7 +271,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
                 DispatchQueue.main.async {
                     self.suggestionListWithUrlFiltred.removeAll()
                     self.suggestionListWithUrlFiltred.append(contentsOf: suggestionListFiltredWithUrlTmp)
-                    self.updateAfterSearch()
+                    self.updateAfterSearch(caracters: caracters)
                 }
             }
             
@@ -287,9 +283,10 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         return ((stringQueried.range(of: stringSearched, options: String.CompareOptions.caseInsensitive, range: nil, locale: nil)) != nil)
     }
     
-    private func updateAfterSearch(){
+    private func updateAfterSearch(caracters: String){
         self.suggestionsView.reloadData()
         self.updateSizeSuggestionsView()
+        caracters.isEmpty ? self.closeSuggestionsView() : self.openSuggestionsView()
     }
     
     // --------------------------------
@@ -335,10 +332,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
             self.suggestionsView.alpha = 0.0
             self.suggestionsShadow.alpha = 0.0
-        }, completion: { (finished) -> Void in
-            self.suggestionsView.removeFromSuperview()
-            self.suggestionsShadow.removeFromSuperview()
-        })
+        }, completion: nil)
     }
     
     // --------------------------------
@@ -346,11 +340,11 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // --------------------------------
     
     private func getSuggestionsViewX() -> CGFloat {
-        return self.getEditText().frame.origin.x
+        return self.getGlobalPointEditText().x
     }
     
     private func getSuggestionsViewY() -> CGFloat {
-        return self.frame.origin.y.adding(self.getEditText().frame.height).adding((self.frame.height.subtracting(self.getEditText().frame.height)).divided(by: 2)).subtracting(4)
+        return self.getShadowY().subtracting(self.suggestionsView_verticalSpaceWithSearchBar)
     }
     
     private func getSuggestionsViewWidth() -> CGFloat {
@@ -362,11 +356,11 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     }
     
     private func getShadowX() -> CGFloat {
-        return self.frame.origin.x
+        return 0
     }
     
     private func getShadowY() -> CGFloat {
-        return self.frame.origin.y.adding(self.frame.height)
+        return self.getGlobalPointEditText().y.adding(self.getEditText().frame.height)
     }
     
     private func getShadowHeight() -> CGFloat {
@@ -374,7 +368,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     }
     
     private func getShadowWidth() -> CGFloat {
-        return self.frame.width
+        return (self.getTopViewController()?.view.frame.width)!
     }
     
     private func updateSizeSuggestionsView(){
@@ -424,6 +418,10 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         } else {
             return ""
         }
+    }
+    
+    private func getGlobalPointEditText() -> CGPoint {
+        return self.getEditText().superview!.convert(self.getEditText().frame.origin, to: nil)
     }
     
     private func interceptOrientationChange(){

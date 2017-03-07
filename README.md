@@ -113,11 +113,12 @@ self.modernSearchBar.suggestionsView_backgroundColor = UIColor.brown
 self.modernSearchBar.suggestionsView_contentViewColor = UIColor.yellow
 self.modernSearchBar.suggestionsView_separatorStyle = .singleLine
 self.modernSearchBar.suggestionsView_selectionStyle = UITableViewCellSelectionStyle.gray
+self.modernSearchBarsuggestionsView_verticalSpaceWithSearchBar = 10
 
   ```
 
 ## Version
-1.1
+1.2
 
 ## License
 
