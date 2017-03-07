@@ -58,7 +58,7 @@ var suggestionList = Array<String>()
 suggestionList.append("Onions")
 suggestionList.append("Celery")
 
-self.modernSearchBar.setDatas(datas: suggestionList
+self.modernSearchBar.setDatas(datas: suggestionList)
 
 // 2 - With custom Array<ModernSearchBarModel>
 var suggestionListWithUrl = Array<ModernSearchBarModel>()
