@@ -32,7 +32,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     private var suggestionsShadow: UIView!
     
     //MARK: DELEGATE
-    var delegateModernSearchBar: ModernSearchBarDelegate?
+    public var delegateModernSearchBar: ModernSearchBarDelegate?
     
     //PUBLICS OPTIONS
     public var shadowView_alpha: CGFloat = 0.3
