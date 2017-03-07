@@ -38,6 +38,9 @@ pod 'ModernSearchBar'
 </p>
 ###2 - Configure ViewController
 ```swift
+//Import lib on the top of ViewController
+import ModernSearchBar
+
 //Create an IBOutlet from your searchBar
  @IBOutlet weak var modernSearchBar: ModernSearchBar!
 
