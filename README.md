@@ -14,7 +14,8 @@
 This search bar will allow you to offer suggestions words to your users when they are looking for something using default iOS search bar. Enjoy it !
 
 
-## DEMO (Two ways to use ModernSearchBar)
+## DEMO
+### Two ways to use this lib
 <p align="center">
  <h3>1 - With String</h3>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif", height=300/>
