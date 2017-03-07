@@ -31,11 +31,11 @@ pod 'ModernSearchBar'
 
 
 ## USAGE
-####1 - StoryBoard setting
+###1 - Configure StoryBoard (Custom Class)
 <p align="center">
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/> 
 </p>
-####2 - ViewController setting
+###2 - Configure ViewController
 ```swift
 //Create an IBOutlet from your searchBar
  @IBOutlet weak var modernSearchBar: ModernSearchBar!
