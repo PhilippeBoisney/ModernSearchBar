@@ -31,18 +31,25 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
     // OPTIONNAL DELEGATE METHODS
     //----------------------------------------
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Text did change, what i'm suppose to do ?")
-    }
     
+    ///Called if you use String suggestion list
     func onClickItemSuggestionsView(item: String) {
         print("User touched this item: "+item)
     }
     
+    ///Called if you use Custom Item suggestion list
     func onClickItemWithUrlSuggestionsView(item: ModernSearchBarModel) {
         print("User touched this item: "+item.title+" with this url: "+item.url.description)
     }
     
+    ///Called when user touched shadowView
+    func onClickShadowView(shadowView: UIView) {
+        print("User touched shadowView")
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Text did change, what i'm suppose to do ?")
+    }
     
     //----------------------------------------
     // CONFIGURE SEARCH BAR (TWO WAYS)
