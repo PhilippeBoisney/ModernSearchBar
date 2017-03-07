@@ -1,7 +1,7 @@
 <p>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/bandeau.png"/>
 </p>
-**The famous iOS searching bar with auto completion feature implemented.**
+**The famous iOS search bar with auto completion feature implemented.**
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
@@ -11,7 +11,7 @@
 )](http://mit-license.org)
 
 ## PRESENTATION
-This searching bar will allow you to offer suggestions words to your users when they are looking for something using default iOS search bar.
+This search bar will allow you to offer suggestions words to your users when they are looking for something using default iOS search bar. Enjoy it !
 
 
 ## DEMO (Two ways to use ModernSearchBar)
@@ -47,7 +47,7 @@ class ViewController: UIViewController, ModernSearchBarDelegate
 self.modernSearchBar.delegateModernSearchBar = self
 
 //Set datas to fill the suggestionsView of the searchbar.
-//Two ways (you have to pick one, you can't implement both obviously)
+//Two ways (you have to choose only one, you can't implement both obviously)
 
 // 1 - With an Array<String>
 var suggestionList = Array<String>()
@@ -65,7 +65,7 @@ self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
 
 ```
 ## DELEGATE
-ModernSearchBarDelegate inherit from UISearchBarDelegate, so you can find commons methods you usually use. Also, I add those methods to handle click actions on suggestionsView.
+ModernSearchBarDelegate inherit from UISearchBarDelegate, so you can find commons methods you already use in your project. Also, I add those methods to handle click actions on suggestionsView.
  ```swift
  
 ///Called if you use String suggestion list
