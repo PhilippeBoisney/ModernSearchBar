@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModernSearchBarCell: UITableViewCell {
+public class ModernSearchBarCell: UITableViewCell {
     
     public static let defaultMargin: CGFloat = 10
     
@@ -20,11 +20,11 @@ class ModernSearchBarCell: UITableViewCell {
         self.setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
     }   
