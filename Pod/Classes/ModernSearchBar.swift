@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
     public enum Choice {
         case normal

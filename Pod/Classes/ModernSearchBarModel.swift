@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModernSearchBarModel: NSObject {
+public class ModernSearchBarModel: NSObject {
     
     var title: String!
     var url: URL!
