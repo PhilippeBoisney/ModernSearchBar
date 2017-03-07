@@ -31,40 +31,41 @@ pod 'ModernSearchBar'
 
 
 ## USAGE
-####1 - Set custom class with ModernSearchBar
+####1 - StoryBoard setting
 <p align="center">
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/> 
 </p>
-####2 - Create an outlet to your ViewController
+####2 - ViewController setting
 ```swift
+//Create an IBOutlet from your searchBar
  @IBOutlet weak var modernSearchBar: ModernSearchBar!
- ```
-####3 - Set delegate
- ```swift
- self.modernSearchBar.delegateModernSearchBar = self
- ```
-####4 - Set datas (Way 1: With String array)
- ```swift
- ///Create array of string
- var suggestionList = Array<String>()
- suggestionList.append("Onions")
- suggestionList.append("Celery")
+
+//Extend your ViewController with 'ModernSearchBarDelegate'
+class ViewController: UIViewController, ModernSearchBarDelegate
+
+//Implement the delegation
+self.modernSearchBar.delegateModernSearchBar = self
+
+//Set datas to fill the suggestionsView of the searchbar.
+//Two ways (you have to pick one, you can't implement both obviously)
+
+// 1 - With an Array<String>
+var suggestionList = Array<String>()
+suggestionList.append("Onions")
+suggestionList.append("Celery")
  
- //Fill the searchbar
- self.modernSearchBar.setDatas(datas: suggestionList)
- ```
-####4 bis - Set datas (Way 2: With custom item array)
- ```swift
- ///Create array of ModernSearchBarModel containing a title and a url
- var suggestionListWithUrl = Array<ModernSearchBarModel>()
- suggestionListWithUrl.append(ModernSearchBarModel(title: "Alpha", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleA.png"))
- suggestionListWithUrl.append(ModernSearchBarModel(title: "Bravo", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleB.png"))
- 
- //Fill the searchbar
- self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
- ```
-**Delegate**
-Delegate inherit from UISearchBarDelegate, so you can find commons methods. Also, we add this methods to handle click actions on suggestionsView.
+self.modernSearchBar.setDatas(datas: suggestionList
+
+// 2 - With custom Array<ModernSearchBarModel>
+var suggestionListWithUrl = Array<ModernSearchBarModel>()
+suggestionListWithUrl.append(ModernSearchBarModel(title: "Alpha", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleA.png"))
+suggestionListWithUrl.append(ModernSearchBarModel(title: "Bravo", url: "https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/exampleB.png"))
+
+self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
+
+```
+## DELEGATE
+ModernSearchBarDelegate inherit from UISearchBarDelegate, so you can find commons methods you usually use. Also, I add those methods to handle click actions on suggestionsView.
  ```swift
  
 ///Called if you use String suggestion list
@@ -83,7 +84,7 @@ func onClickShadowView(shadowView: UIView) {
 }
  
  ``` 
- **CUSTOMIZING**
+## CUSTOMIZING
  
  ```swift
 
@@ -116,6 +117,30 @@ self.modernSearchBar.suggestionsView_selectionStyle = UITableViewCellSelectionSt
   
 ## Version
 1.0
+
+## License
+
+Copyright 2017 Boisney Philippe
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. **Create New Pull Request**
 
 ## Author
 Philippe BOISNEY (phil.boisney(@)gmail.com)
