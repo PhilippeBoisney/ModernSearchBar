@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModernSearchBarCell: UITableViewCell {
+public class ModernSearchBarCell: UITableViewCell {
     
     public static let defaultMargin: CGFloat = 10
     
