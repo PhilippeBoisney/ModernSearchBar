@@ -63,6 +63,26 @@ pod 'ModernSearchBar'
  //Fill the searchbar
  self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
  ```
+ **Delegate**
+Delegate inherit from UISearchBarDelegate, so you can find commons methods. Also, we add this methods to handle click actions on suggestionsView.
+ ```swift
+ 
+///Called if you use String suggestion list
+func onClickItemSuggestionsView(item: String) {
+    print("User touched this item: "+item)
+}
+
+///Called if you use Custom Item suggestion list
+func onClickItemWithUrlSuggestionsView(item: ModernSearchBarModel) {
+    print("User touched this item: "+item.title+" with this url: "+item.url.description)
+}
+
+///Called when user touched shadowView
+func onClickShadowView(shadowView: UIView) {
+    print("User touched shadowView")
+}
+ 
+ ``` 
  **CUSTOMIZING**
  
  ```swift
