@@ -63,7 +63,7 @@ pod 'ModernSearchBar'
  //Fill the searchbar
  self.modernSearchBar.setDatasWithUrl(datas: suggestionListWithUrl)
  ```
- **Delegate**
+**Delegate**
 Delegate inherit from UISearchBarDelegate, so you can find commons methods. Also, we add this methods to handle click actions on suggestionsView.
  ```swift
  
