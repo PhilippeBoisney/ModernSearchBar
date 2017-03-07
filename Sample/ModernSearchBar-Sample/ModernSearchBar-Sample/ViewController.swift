@@ -19,9 +19,9 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
         self.makingSearchBarAwesome()
         
         ///Uncomment this one...
-        //self.configureSearchBar()
+        self.configureSearchBar()
         ///... or uncomment this one ! (but you can't uncomment both)
-        self.configureSearchBarWithUrl()
+        //self.configureSearchBarWithUrl()
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,7 +81,7 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
         self.modernSearchBar.setDatas(datas: suggestionList)
         
         ///Custom design with all paramaters if you want to
-        self.customDesign()
+        //self.customDesign()
         
     }
     
