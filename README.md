@@ -25,10 +25,14 @@ This search bar will allow you to offer suggestions words to your users when the
 </p>
 
 ## INSTALLATION
-####COCOAPODS
+#### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `ModernSearchBar` by adding it to your `Podfile`:
 ```
 pod 'ModernSearchBar'
 ```
+#### Manually
+1. Download and drop all *.swift files contained in Pods folder in your project. Don't forget to import the assets folder too.
+2. Enjoy !  
 
 
 ## USAGE
