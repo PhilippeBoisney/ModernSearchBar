@@ -153,6 +153,22 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.endEditing(true)
     }
     
+    public func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        if let shouldEndEditing = self.delegateModernSearchBar?.searchBarShouldEndEditing?(searchBar) {
+            return shouldEndEditing
+        } else {
+            return true
+        }
+    }
+    
+    public func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        if let shouldBeginEditing = self.delegateModernSearchBar?.searchBarShouldBeginEditing?(searchBar) {
+            return shouldBeginEditing
+        } else {
+            return true
+        }
+    }
+    
     
     // --------------------------------
     // ACTIONS
