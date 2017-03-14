@@ -150,6 +150,7 @@ class ViewController: UIViewController, ModernSearchBarDelegate {
          self.modernSearchBar.suggestionsView_separatorStyle = .singleLine
          self.modernSearchBar.suggestionsView_selectionStyle = UITableViewCellSelectionStyle.gray
          self.modernSearchBarsuggestionsView_verticalSpaceWithSearchBar = 10
+         self.suggestionsView_spaceWithKeyboard = 20
     }
     
     private func makingSearchBarAwesome(){
