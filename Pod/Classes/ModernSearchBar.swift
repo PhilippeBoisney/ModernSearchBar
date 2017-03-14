@@ -331,7 +331,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     }
     
     private func closeSuggestionsView(){
-        if (self.isSuggestionsViewOpened){
+        if (self.isSuggestionsViewOpened == true){
             self.animationClosing()
             self.isSuggestionsViewOpened = false
         }
