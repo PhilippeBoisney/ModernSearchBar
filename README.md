@@ -39,6 +39,7 @@ pod 'ModernSearchBar'
 <p align="center">
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/>
 </p>
+
 ### 2 - Configure ViewController
 
 
