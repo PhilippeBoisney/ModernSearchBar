@@ -26,6 +26,10 @@ This search bar will allow you to offer suggestions words to your users when the
 
 </p>
 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif)  |  ![](https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif)
+
 ## INSTALLATION
 #### CocoaPods
 You can use [CocoaPods](http://cocoapods.org/) to install `ModernSearchBar` by adding it to your `Podfile`:
