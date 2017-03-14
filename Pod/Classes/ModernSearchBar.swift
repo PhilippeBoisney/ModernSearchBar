@@ -27,6 +27,8 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     
     private var choice: Choice = .normal
     
+    private var keyboardHeight: CGFloat = 0
+    
     //MARKS: VIEWS
     private var suggestionsView: UITableView!
     private var suggestionsShadow: UIView!
@@ -43,16 +45,18 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     public var searchLabel_textColor: UIColor?
     public var searchLabel_backgroundColor: UIColor?
     
-    public var suggestionsView_maxHeight: CGFloat = UIScreen.main.bounds.height.divided(by: 2.5)
+    public var suggestionsView_maxHeight: CGFloat!
     public var suggestionsView_backgroundColor: UIColor?
     public var suggestionsView_contentViewColor: UIColor?
     public var suggestionsView_separatorStyle: UITableViewCellSeparatorStyle = .none
     public var suggestionsView_selectionStyle: UITableViewCellSelectionStyle = UITableViewCellSelectionStyle.none
-    public var suggestionsView_verticalSpaceWithSearchBar: CGFloat = 4
+    public var suggestionsView_verticalSpaceWithSearchBar: CGFloat = 3
     
     public var suggestionsView_searchIcon_height: CGFloat = 17
     public var suggestionsView_searchIcon_width: CGFloat = 17
     public var suggestionsView_searchIcon_isRound = true
+    
+    public var suggestionsView_spaceWithKeyboard:CGFloat = 3
     
   
     //MARK: INITIALISERS
@@ -76,6 +80,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.delegate = self
         self.isSuggestionsViewOpened = false
         self.interceptOrientationChange()
+        self.interceptKeyboardChange()
     }
     
     private func configureViews(){
@@ -151,6 +156,22 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarCancelButtonClicked?(searchBar)
         self.endEditing(true)
+    }
+    
+    public func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        if let shouldEndEditing = self.delegateModernSearchBar?.searchBarShouldEndEditing?(searchBar) {
+            return shouldEndEditing
+        } else {
+            return true
+        }
+    }
+    
+    public func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        if let shouldBeginEditing = self.delegateModernSearchBar?.searchBarShouldBeginEditing?(searchBar) {
+            return shouldBeginEditing
+        } else {
+            return true
+        }
     }
     
     
@@ -315,7 +336,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     }
     
     private func closeSuggestionsView(){
-        if (self.isSuggestionsViewOpened){
+        if (self.isSuggestionsViewOpened == true){
             self.animationClosing()
             self.isSuggestionsViewOpened = false
         }
@@ -373,21 +394,36 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     
     private func updateSizeSuggestionsView(){
         var frame: CGRect = self.suggestionsView.frame
-        frame.size.height = self.getMaxHeightSuggestionsView(newHeight: self.suggestionsView.contentSize.height)
-        self.suggestionsView.frame = frame
-        UIView.animate(withDuration: 0.0) {
+        frame.size.height = self.getExactMaxHeightSuggestionsView(newHeight: self.suggestionsView.contentSize.height)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.suggestionsView.frame = frame
             self.suggestionsView.layoutIfNeeded()
             self.suggestionsView.sizeToFit()
         }
     }
     
-    private func getMaxHeightSuggestionsView(newHeight: CGFloat) -> CGFloat {
-        if (newHeight > self.suggestionsView_maxHeight) {
-            return self.suggestionsView_maxHeight
+    private func getExactMaxHeightSuggestionsView(newHeight: CGFloat) -> CGFloat {
+        var estimatedMaxView: CGFloat!
+        if self.suggestionsView_maxHeight != nil {
+            estimatedMaxView = self.suggestionsView_maxHeight
+        } else {
+            estimatedMaxView = self.getEstimateHeightSuggestionsView()
+        }
+        
+        if (newHeight > estimatedMaxView) {
+            return estimatedMaxView
         } else {
             return newHeight
         }
     }
+    
+    private func getEstimateHeightSuggestionsView() -> CGFloat {
+        return self.getViewTopController().frame.height
+            .subtracting(self.getShadowY())
+            .subtracting(self.keyboardHeight)
+            .subtracting(self.suggestionsView_spaceWithKeyboard)
+    }    
     
     // --------------------------------
     // UTILS
@@ -398,6 +434,10 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
             let superView: UIView = topController.view
             superView.addSubview(view)
         }
+    }
+    
+    private func getViewTopController() -> UIView{
+        return self.getTopViewController()!.view
     }
     
     private func getTopViewController() -> UIViewController? {
@@ -424,6 +464,10 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         return self.getEditText().superview!.convert(self.getEditText().frame.origin, to: nil)
     }
     
+    // --------------------------------
+    // OBSERVERS CHANGES
+    // --------------------------------
+    
     private func interceptOrientationChange(){
         self.getEditText().addObserver(self, forKeyPath: "frame", options: NSKeyValueObservingOptions(rawValue: 0), context: nil)
     }
@@ -435,6 +479,25 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
+    private func interceptKeyboardChange(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        let userInfo = notification.userInfo as! [String: NSObject] as NSDictionary
+        let keyboardFrame = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! CGRect
+        let keyboardHeight = keyboardFrame.height
+        
+        self.keyboardHeight = keyboardHeight
+        self.updateSizeSuggestionsView()
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        self.keyboardHeight = 0
+        self.updateSizeSuggestionsView()
+    }
+    
     // --------------------------------
     // PUBLIC ACCESS
     // --------------------------------
@@ -442,4 +505,5 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     public func getSuggestionsView() -> UITableView {
         return self.suggestionsView
     }
+    
 }

@@ -32,7 +32,7 @@ public class ModernSearchBarCell: UITableViewCell {
     private func setup(){
         ///Setup image
         self.imgModernSearchBar.translatesAutoresizingMaskIntoConstraints = false
-        self.imgModernSearchBar.contentMode = .scaleAspectFit
+        self.imgModernSearchBar.contentMode = .scaleAspectFill
         
         ///Setup label
         self.labelModelSearchBar.translatesAutoresizingMaskIntoConstraints = false
