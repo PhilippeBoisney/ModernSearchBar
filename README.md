@@ -19,7 +19,7 @@ This search bar will allow you to offer suggestions words to your users when the
 - One with a simple array of string (Array&#60;String&#62;)
 - The other with an array of custom object (Array&#60;ModernSearchBarModel&#62;) if you want to get image of each row from an url.
 
-SIMPLE            |  ADVANCED
+SIMPLE  |  ADVANCED
 :-------------------------:|:-------------------------:
 ![](https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_simple_list.gif)  |  ![](https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Gifs/Gif_complex_list.gif)
 
