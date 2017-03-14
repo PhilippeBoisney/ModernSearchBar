@@ -1,7 +1,6 @@
 <p>
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/bandeau.png"/>
 </p>
-**The famous iOS search bar with auto completion feature implemented.**
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
@@ -36,11 +35,11 @@ pod 'ModernSearchBar'
 
 
 ## USAGE
-###1 - Configure StoryBoard (Custom Class)
+### 1 - Configure StoryBoard (Custom Class)
 <p align="center">
  <img src ="https://github.com/PhilippeBoisney/ModernSearchBar/raw/master/Examples%20Url/usage_1.png", height=300/>
 </p>
-###2 - Configure ViewController
+### 2 - Configure ViewController
 ```swift
 //Import lib on the top of ViewController
 import ModernSearchBar
