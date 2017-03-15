@@ -75,12 +75,12 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         setup()
     }
     
-    
     private func setup(){
         self.delegate = self
         self.isSuggestionsViewOpened = false
         self.interceptOrientationChange()
         self.interceptKeyboardChange()
+        self.interceptMemoryWarning()
     }
     
     private func configureViews(){
@@ -331,6 +331,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
                 self.addViewToParent(view: self.suggestionsShadow)
                 self.addViewToParent(view: self.suggestionsView)
                 self.isSuggestionsViewOpened = true
+                self.suggestionsView.reloadData()
             }
         }
     }
@@ -429,6 +430,18 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // UTILS
     // --------------------------------
     
+    private func clearCacheOfList(){
+        ///Clearing cache
+        for suggestionItem in self.suggestionListWithUrl {
+            suggestionItem.imgCache = nil
+        }
+        ///Clearing cache
+        for suggestionItem in self.suggestionListWithUrlFiltred {
+            suggestionItem.imgCache = nil
+        }
+        self.suggestionsView.reloadData()
+    }
+    
     private func addViewToParent(view: UIView){
         if let topController = getTopViewController() {
             let superView: UIView = topController.view
@@ -479,6 +492,8 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
+    // ---------------
+    
     private func interceptKeyboardChange(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -496,6 +511,16 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     @objc private func keyboardWillHide(notification: NSNotification) {
         self.keyboardHeight = 0
         self.updateSizeSuggestionsView()
+    }
+    
+    // ---------------
+    
+    private func interceptMemoryWarning(){
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveMemoryWarning(notification:)), name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
+    }
+    
+    @objc private func didReceiveMemoryWarning(notification: NSNotification) {
+        self.clearCacheOfList()
     }
     
     // --------------------------------
