@@ -128,7 +128,7 @@ self.modernSearchBar.suggestionsView_spaceWithKeyboard = 20
   ```
 
 ## Version
-1.3
+1.4
 
 ## License
 

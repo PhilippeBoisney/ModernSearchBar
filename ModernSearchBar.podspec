@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "ModernSearchBar"
-s.version          = "1.3"
+s.version          = "1.4"
 s.summary          = "ModernSearchBar"
 s.description      = "The famous iOS search bar with auto completion feature implemented."
 s.homepage         = "https://github.com/PhilippeBoisney/ModernSearchBar"
