@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class ModernSearchBarModel: NSObject {
+open class ModernSearchBarModel: NSObject {
     
-    public var title: String!
-    public var url: URL!
-    public var imgCache: UIImage!
+    open var title: String!
+    open var url: URL!
+    open var imgCache: UIImage!
     
     public init(title: String, url: String) {
         super.init()

@@ -9,7 +9,7 @@
 
 import UIKit
 
-public class ModernSearchBarIcon : NSObject {
+open class ModernSearchBarIcon : NSObject {
     
     public enum Icon {
         case search
@@ -18,11 +18,11 @@ public class ModernSearchBarIcon : NSObject {
         public var image: UIImage {
             switch self {
             case .none: return UIImage()
-            case .search: return getImageFromBundle(name: "search")
+            case .search: return getImageFromBundle("search")
             }
         }
         
-        private func getImageFromBundle(name: String) -> UIImage {
+        fileprivate func getImageFromBundle(_ name: String) -> UIImage {
             let podBundle = Bundle(for: ModernSearchBarIcon.self)
             if let url = podBundle.url(forResource: "ModernSearchBar", withExtension: "bundle") {
                 let bundle = Bundle(url: url)

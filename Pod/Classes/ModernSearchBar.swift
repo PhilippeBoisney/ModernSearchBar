@@ -8,8 +8,32 @@
 
 import UIKit
 import Foundation
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
 
-public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
+
+open class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
     public enum Choice {
         case normal
@@ -17,46 +41,46 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     }
     
     //MARK: DATAS
-    private var isSuggestionsViewOpened: Bool!
+    fileprivate var isSuggestionsViewOpened: Bool!
     
-    private var suggestionList: Array<String> = Array<String>()
-    private var suggestionListFiltred: Array<String> = Array<String>()
+    fileprivate var suggestionList: Array<String> = Array<String>()
+    fileprivate var suggestionListFiltred: Array<String> = Array<String>()
     
-    private var suggestionListWithUrl: Array<ModernSearchBarModel> = Array<ModernSearchBarModel>()
-    private var suggestionListWithUrlFiltred: Array<ModernSearchBarModel> = Array<ModernSearchBarModel>()
+    fileprivate var suggestionListWithUrl: Array<ModernSearchBarModel> = Array<ModernSearchBarModel>()
+    fileprivate var suggestionListWithUrlFiltred: Array<ModernSearchBarModel> = Array<ModernSearchBarModel>()
     
-    private var choice: Choice = .normal
+    fileprivate var choice: Choice = .normal
     
-    private var keyboardHeight: CGFloat = 0
+    fileprivate var keyboardHeight: CGFloat = 0
     
     //MARKS: VIEWS
-    private var suggestionsView: UITableView!
-    private var suggestionsShadow: UIView!
+    fileprivate var suggestionsView: UITableView!
+    fileprivate var suggestionsShadow: UIView!
     
     //MARK: DELEGATE
-    public var delegateModernSearchBar: ModernSearchBarDelegate?
+    open var delegateModernSearchBar: ModernSearchBarDelegate?
     
     //PUBLICS OPTIONS
-    public var shadowView_alpha: CGFloat = 0.3
+    open var shadowView_alpha: CGFloat = 0.3
     
-    public var searchImage: UIImage! = ModernSearchBarIcon.Icon.search.image
+    open var searchImage: UIImage! = ModernSearchBarIcon.Icon.search.image
     
-    public var searchLabel_font: UIFont?
-    public var searchLabel_textColor: UIColor?
-    public var searchLabel_backgroundColor: UIColor?
+    open var searchLabel_font: UIFont?
+    open var searchLabel_textColor: UIColor?
+    open var searchLabel_backgroundColor: UIColor?
     
-    public var suggestionsView_maxHeight: CGFloat!
-    public var suggestionsView_backgroundColor: UIColor?
-    public var suggestionsView_contentViewColor: UIColor?
-    public var suggestionsView_separatorStyle: UITableViewCellSeparatorStyle = .none
-    public var suggestionsView_selectionStyle: UITableViewCellSelectionStyle = UITableViewCellSelectionStyle.none
-    public var suggestionsView_verticalSpaceWithSearchBar: CGFloat = 3
+    open var suggestionsView_maxHeight: CGFloat!
+    open var suggestionsView_backgroundColor: UIColor?
+    open var suggestionsView_contentViewColor: UIColor?
+    open var suggestionsView_separatorStyle: UITableViewCellSeparatorStyle = .none
+    open var suggestionsView_selectionStyle: UITableViewCellSelectionStyle = UITableViewCellSelectionStyle.none
+    open var suggestionsView_verticalSpaceWithSearchBar: CGFloat = 3
     
-    public var suggestionsView_searchIcon_height: CGFloat = 17
-    public var suggestionsView_searchIcon_width: CGFloat = 17
-    public var suggestionsView_searchIcon_isRound = true
+    open var suggestionsView_searchIcon_height: CGFloat = 17
+    open var suggestionsView_searchIcon_width: CGFloat = 17
+    open var suggestionsView_searchIcon_isRound = true
     
-    public var suggestionsView_spaceWithKeyboard:CGFloat = 3
+    open var suggestionsView_spaceWithKeyboard:CGFloat = 3
     
   
     //MARK: INITIALISERS
@@ -75,7 +99,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         setup()
     }
     
-    private func setup(){
+    fileprivate func setup(){
         self.delegate = self
         self.isSuggestionsViewOpened = false
         self.interceptOrientationChange()
@@ -83,7 +107,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.interceptMemoryWarning()
     }
     
-    private func configureViews(){
+    fileprivate func configureViews(){
         
         ///Configure suggestionsView (TableView)
         self.suggestionsView = UITableView(frame: CGRect(x: getSuggestionsViewX(), y: getSuggestionsViewY(), width: getSuggestionsViewWidth(), height: 0))
@@ -115,13 +139,13 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // SET DATAS
     // --------------------------------
     
-    public func setDatas(datas: Array<String>){
+    open func setDatas(_ datas: Array<String>){
         if (!self.suggestionListWithUrl.isEmpty) { fatalError("You have already filled 'suggestionListWithUrl' ! You can fill only one list. ") }
         self.suggestionList = datas
         self.choice = .normal
     }
     
-    public func setDatasWithUrl(datas: Array<ModernSearchBarModel>){
+    open func setDatasWithUrl(_ datas: Array<ModernSearchBarModel>){
         if (!self.suggestionList.isEmpty) { fatalError("You have already filled 'suggestionList' ! You can fill only one list. ") }
         self.suggestionListWithUrl = datas
         self.choice = .withUrl
@@ -131,34 +155,34 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // DELEGATE METHODS SEARCH BAR
     // --------------------------------
     
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchWhenUserTyping(caracters: searchText)
+    open func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchWhenUserTyping(searchText)
         self.delegateModernSearchBar?.searchBar?(searchBar, textDidChange: searchText)
     }
     
-    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    open func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         if self.suggestionsView == nil { self.configureViews() }
         self.delegateModernSearchBar?.searchBarTextDidEndEditing?(searchBar)
     }
     
-    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    open func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarTextDidEndEditing?(searchBar)
     }
     
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    open func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarSearchButtonClicked?(searchBar)
         self.endEditing(true)
     }
     
-    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    open func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.closeSuggestionsView()
         self.delegateModernSearchBar?.searchBarCancelButtonClicked?(searchBar)
         self.endEditing(true)
     }
     
-    public func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+    open func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         if let shouldEndEditing = self.delegateModernSearchBar?.searchBarShouldEndEditing?(searchBar) {
             return shouldEndEditing
         } else {
@@ -166,7 +190,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    public func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+    open func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         if let shouldBeginEditing = self.delegateModernSearchBar?.searchBarShouldBeginEditing?(searchBar) {
             return shouldBeginEditing
         } else {
@@ -181,7 +205,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     
     ///Handle click on shadow view
     func onClickShadowView(_ sender:UITapGestureRecognizer){
-        self.delegateModernSearchBar?.onClickShadowView?(shadowView: self.suggestionsShadow)
+        self.delegateModernSearchBar?.onClickShadowView?(self.suggestionsShadow)
         self.closeSuggestionsView()
     }
     
@@ -194,7 +218,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // DELEGATE METHODS TABLE VIEW
     // --------------------------------
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch self.choice {
         case .normal:
             return self.suggestionListFiltred.count
@@ -203,7 +227,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:ModernSearchBarCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ModernSearchBarCell
         
@@ -229,25 +253,25 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         cell.selectionStyle = self.suggestionsView_selectionStyle
         
         ///Configure Image
-        cell.configureImage(choice: self.choice, searchImage: self.searchImage, suggestionsListWithUrl: self.suggestionListWithUrlFiltred, position: indexPath.row, isImageRound: self.suggestionsView_searchIcon_isRound, heightImage: self.suggestionsView_searchIcon_height)
+        cell.configureImage(self.choice, searchImage: self.searchImage, suggestionsListWithUrl: self.suggestionListWithUrlFiltred, position: indexPath.row, isImageRound: self.suggestionsView_searchIcon_isRound, heightImage: self.suggestionsView_searchIcon_height)
         //self.fetchImageFromUrl(model: self.suggestionListWithUrlFiltred[indexPath.row], cell: cell, indexPath: indexPath)
         
         ///Configure max width label size
-        cell.configureWidthMaxLabel(suggestionsViewWidth: self.suggestionsView.frame.width, searchImageWidth: self.suggestionsView_searchIcon_width)
+        cell.configureWidthMaxLabel(self.suggestionsView.frame.width, searchImageWidth: self.suggestionsView_searchIcon_width)
         
         ///Configure Constraints
-        cell.configureConstraints(heightImage: self.suggestionsView_searchIcon_height, widthImage: self.suggestionsView_searchIcon_width)
+        cell.configureConstraints(self.suggestionsView_searchIcon_height, widthImage: self.suggestionsView_searchIcon_width)
         
         
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch self.choice {
         case .normal:
-            self.delegateModernSearchBar?.onClickItemSuggestionsView?(item: self.suggestionListFiltred[indexPath.row])
+            self.delegateModernSearchBar?.onClickItemSuggestionsView?(self.suggestionListFiltred[indexPath.row])
         case .withUrl:
-            self.delegateModernSearchBar?.onClickItemWithUrlSuggestionsView?(item: self.suggestionListWithUrlFiltred[indexPath.row])
+            self.delegateModernSearchBar?.onClickItemWithUrlSuggestionsView?(self.suggestionListWithUrlFiltred[indexPath.row])
         }
     }
     
@@ -256,7 +280,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // --------------------------------
     
     ///Main function that is called when user searching
-    private func searchWhenUserTyping(caracters: String){
+    fileprivate func searchWhenUserTyping(_ caracters: String){
         
         switch self.choice {
         
@@ -266,14 +290,14 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
             var suggestionListFiltredTmp = Array<String>()
             DispatchQueue.global(qos: .background).async {
                 for item in self.suggestionList {
-                    if (self.researchCaracters(stringSearched: caracters, stringQueried: item)){
+                    if (self.researchCaracters(caracters, stringQueried: item)){
                         suggestionListFiltredTmp.append(item)
                     }
                 }
                 DispatchQueue.main.async {
                     self.suggestionListFiltred.removeAll()
                     self.suggestionListFiltred.append(contentsOf: suggestionListFiltredTmp)
-                    self.updateAfterSearch(caracters: caracters)
+                    self.updateAfterSearch(caracters)
                 }
             }
             
@@ -285,14 +309,14 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
             var suggestionListFiltredWithUrlTmp = Array<ModernSearchBarModel>()
             DispatchQueue.global(qos: .background).async {
                 for item in self.suggestionListWithUrl {
-                    if (self.researchCaracters(stringSearched: caracters, stringQueried: item.title)){
+                    if (self.researchCaracters(caracters, stringQueried: item.title)){
                         suggestionListFiltredWithUrlTmp.append(item)
                     }
                 }
                 DispatchQueue.main.async {
                     self.suggestionListWithUrlFiltred.removeAll()
                     self.suggestionListWithUrlFiltred.append(contentsOf: suggestionListFiltredWithUrlTmp)
-                    self.updateAfterSearch(caracters: caracters)
+                    self.updateAfterSearch(caracters)
                 }
             }
             
@@ -300,11 +324,15 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    private func researchCaracters(stringSearched: String, stringQueried: String) -> Bool {
-        return ((stringQueried.range(of: stringSearched, options: String.CompareOptions.caseInsensitive, range: nil, locale: nil)) != nil)
+    fileprivate func researchCaracters(_ stringSearched: String, stringQueried: String) -> Bool {
+        
+        var searched = stringSearched.lowercased().folding(options: .diacriticInsensitive, locale: .current)
+        var queried = stringQueried.lowercased().folding(options: .diacriticInsensitive, locale: .current)
+        
+        return queried.contains(searched)
     }
     
-    private func updateAfterSearch(caracters: String){
+    fileprivate func updateAfterSearch(_ caracters: String){
         self.suggestionsView.reloadData()
         self.updateSizeSuggestionsView()
         caracters.isEmpty ? self.closeSuggestionsView() : self.openSuggestionsView()
@@ -314,7 +342,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // SUGGESTIONS VIEW UTILS
     // --------------------------------
     
-    private func haveToOpenSuggestionView() -> Bool {
+    fileprivate func haveToOpenSuggestionView() -> Bool {
         switch self.choice {
         case .normal:
             return !self.suggestionListFiltred.isEmpty
@@ -323,34 +351,34 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    private func openSuggestionsView(){
+    fileprivate func openSuggestionsView(){
         if (self.haveToOpenSuggestionView()){
             if (!self.isSuggestionsViewOpened){
                 self.animationOpening()
                 
-                self.addViewToParent(view: self.suggestionsShadow)
-                self.addViewToParent(view: self.suggestionsView)
+                self.addViewToParent(self.suggestionsShadow)
+                self.addViewToParent(self.suggestionsView)
                 self.isSuggestionsViewOpened = true
                 self.suggestionsView.reloadData()
             }
         }
     }
     
-    private func closeSuggestionsView(){
+    fileprivate func closeSuggestionsView(){
         if (self.isSuggestionsViewOpened == true){
             self.animationClosing()
             self.isSuggestionsViewOpened = false
         }
     }
     
-    private func animationOpening(){
+    fileprivate func animationOpening(){
         UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
             self.suggestionsView.alpha = 1.0
             self.suggestionsShadow.alpha = 1.0
         }, completion: nil)
     }
     
-    private func animationClosing(){
+    fileprivate func animationClosing(){
         UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
             self.suggestionsView.alpha = 0.0
             self.suggestionsShadow.alpha = 0.0
@@ -361,41 +389,41 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // VIEW UTILS
     // --------------------------------
     
-    private func getSuggestionsViewX() -> CGFloat {
+    fileprivate func getSuggestionsViewX() -> CGFloat {
         return self.getGlobalPointEditText().x
     }
     
-    private func getSuggestionsViewY() -> CGFloat {
+    fileprivate func getSuggestionsViewY() -> CGFloat {
         return self.getShadowY().subtracting(self.suggestionsView_verticalSpaceWithSearchBar)
     }
     
-    private func getSuggestionsViewWidth() -> CGFloat {
+    fileprivate func getSuggestionsViewWidth() -> CGFloat {
         return self.getEditText().frame.width
     }
     
-    private func getSuggestionsViewHeight() -> CGFloat {
+    fileprivate func getSuggestionsViewHeight() -> CGFloat {
         return self.getEditText().frame.height
     }
     
-    private func getShadowX() -> CGFloat {
+    fileprivate func getShadowX() -> CGFloat {
         return 0
     }
     
-    private func getShadowY() -> CGFloat {
+    fileprivate func getShadowY() -> CGFloat {
         return self.getGlobalPointEditText().y.adding(self.getEditText().frame.height)
     }
     
-    private func getShadowHeight() -> CGFloat {
+    fileprivate func getShadowHeight() -> CGFloat {
         return (self.getTopViewController()?.view.frame.height)!
     }
     
-    private func getShadowWidth() -> CGFloat {
+    fileprivate func getShadowWidth() -> CGFloat {
         return (self.getTopViewController()?.view.frame.width)!
     }
     
-    private func updateSizeSuggestionsView(){
+    fileprivate func updateSizeSuggestionsView(){
         var frame: CGRect = self.suggestionsView.frame
-        frame.size.height = self.getExactMaxHeightSuggestionsView(newHeight: self.suggestionsView.contentSize.height)
+        frame.size.height = self.getExactMaxHeightSuggestionsView(self.suggestionsView.contentSize.height)
         
         UIView.animate(withDuration: 0.3) {
             self.suggestionsView.frame = frame
@@ -404,7 +432,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    private func getExactMaxHeightSuggestionsView(newHeight: CGFloat) -> CGFloat {
+    fileprivate func getExactMaxHeightSuggestionsView(_ newHeight: CGFloat) -> CGFloat {
         var estimatedMaxView: CGFloat!
         if self.suggestionsView_maxHeight != nil {
             estimatedMaxView = self.suggestionsView_maxHeight
@@ -419,7 +447,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    private func getEstimateHeightSuggestionsView() -> CGFloat {
+    fileprivate func getEstimateHeightSuggestionsView() -> CGFloat {
         return self.getViewTopController().frame.height
             .subtracting(self.getShadowY())
             .subtracting(self.keyboardHeight)
@@ -430,7 +458,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // UTILS
     // --------------------------------
     
-    private func clearCacheOfList(){
+    fileprivate func clearCacheOfList(){
         ///Clearing cache
         for suggestionItem in self.suggestionListWithUrl {
             suggestionItem.imgCache = nil
@@ -442,18 +470,18 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.suggestionsView.reloadData()
     }
     
-    private func addViewToParent(view: UIView){
+    fileprivate func addViewToParent(_ view: UIView){
         if let topController = getTopViewController() {
             let superView: UIView = topController.view
             superView.addSubview(view)
         }
     }
     
-    private func getViewTopController() -> UIView{
+    fileprivate func getViewTopController() -> UIView{
         return self.getTopViewController()!.view
     }
     
-    private func getTopViewController() -> UIViewController? {
+    fileprivate func getTopViewController() -> UIViewController? {
         var topController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController
         while topController?.presentedViewController != nil {
             topController = topController?.presentedViewController
@@ -461,11 +489,11 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         return topController
     }
     
-    private func getEditText() -> UITextField {
+    fileprivate func getEditText() -> UITextField {
         return self.value(forKey: "searchField") as! UITextField
     }
     
-    private func getText() -> String{
+    fileprivate func getText() -> String{
         if let text = self.getEditText().text {
             return text
         } else {
@@ -473,7 +501,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         }
     }
     
-    private func getGlobalPointEditText() -> CGPoint {
+    fileprivate func getGlobalPointEditText() -> CGPoint {
         return self.getEditText().superview!.convert(self.getEditText().frame.origin, to: nil)
     }
     
@@ -481,11 +509,11 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // OBSERVERS CHANGES
     // --------------------------------
     
-    private func interceptOrientationChange(){
+    fileprivate func interceptOrientationChange(){
         self.getEditText().addObserver(self, forKeyPath: "frame", options: NSKeyValueObservingOptions(rawValue: 0), context: nil)
     }
     
-    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if (keyPath == "frame"){
             self.closeSuggestionsView()
             self.configureViews()
@@ -494,7 +522,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     
     // ---------------
     
-    private func interceptKeyboardChange(){
+    fileprivate func interceptKeyboardChange(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }

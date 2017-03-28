@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public protocol ModernSearchBarDelegate: UISearchBarDelegate {
-    @objc optional func onClickShadowView(shadowView: UIView)
-    @objc optional func onClickItemSuggestionsView(item: String)
-    @objc optional func onClickItemWithUrlSuggestionsView(item: ModernSearchBarModel)    
+    @objc optional func onClickShadowView(_ shadowView: UIView)
+    @objc optional func onClickItemSuggestionsView(_ item: String)
+    @objc optional func onClickItemWithUrlSuggestionsView(_ item: ModernSearchBarModel)    
 }

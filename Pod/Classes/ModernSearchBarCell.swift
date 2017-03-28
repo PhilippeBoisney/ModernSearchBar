@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class ModernSearchBarCell: UITableViewCell {
+open class ModernSearchBarCell: UITableViewCell {
     
-    public static let defaultMargin: CGFloat = 10
+    open static let defaultMargin: CGFloat = 10
     
     let imgModernSearchBar = UIImageView()
     var labelModelSearchBar = UILabel()
@@ -24,12 +24,12 @@ public class ModernSearchBarCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
     }   
     
-    private func setup(){
+    fileprivate func setup(){
         ///Setup image
         self.imgModernSearchBar.translatesAutoresizingMaskIntoConstraints = false
         self.imgModernSearchBar.contentMode = .scaleAspectFill
@@ -44,7 +44,7 @@ public class ModernSearchBarCell: UITableViewCell {
     }
     
     ///Configure constraint for each row of suggestionsView
-    public func configureConstraints(heightImage: CGFloat, widthImage: CGFloat){
+    open func configureConstraints(_ heightImage: CGFloat, widthImage: CGFloat){
         
         ///Image constraints
         let verticalImageConstraint = NSLayoutConstraint(item: self.imgModernSearchBar, attribute:.centerYWithinMargins, relatedBy: .equal, toItem: self.contentView, attribute: .centerYWithinMargins, multiplier: 1.0, constant: 0)
@@ -77,7 +77,7 @@ public class ModernSearchBarCell: UITableViewCell {
     }
     
     ///Configure image of suggestionsView
-    public func configureImage(choice: ModernSearchBar.Choice, searchImage: UIImage, suggestionsListWithUrl: Array<ModernSearchBarModel>, position: Int, isImageRound: Bool, heightImage: CGFloat){
+    open func configureImage(_ choice: ModernSearchBar.Choice, searchImage: UIImage, suggestionsListWithUrl: Array<ModernSearchBarModel>, position: Int, isImageRound: Bool, heightImage: CGFloat){
         switch choice {
         ///Show image from asset
         case .normal:
@@ -89,7 +89,7 @@ public class ModernSearchBarCell: UITableViewCell {
             if (model.imgCache != nil){
                 self.imgModernSearchBar.image = model.imgCache
             } else {
-                self.downloadImage(model: model)
+                self.downloadImage(model)
             }
             break
         }
@@ -101,7 +101,7 @@ public class ModernSearchBarCell: UITableViewCell {
     }
     
     ///Otherwise constaint on label doesn't works...
-    public func configureWidthMaxLabel(suggestionsViewWidth: CGFloat, searchImageWidth: CGFloat) {
+    open func configureWidthMaxLabel(_ suggestionsViewWidth: CGFloat, searchImageWidth: CGFloat) {
         var widthMax: CGFloat = suggestionsViewWidth
         widthMax.subtract(ModernSearchBarCell.defaultMargin.multiplied(by: 3))
         widthMax.subtract(searchImageWidth)
@@ -110,9 +110,9 @@ public class ModernSearchBarCell: UITableViewCell {
     
     //----------------------------
     
-    private func downloadImage(model: ModernSearchBarModel) {
+    fileprivate func downloadImage(_ model: ModernSearchBarModel) {
         DispatchQueue.global(qos: .background).async {
-            self.getDataFromUrl(url: model.url) { (data, response, error)  in
+            self.getDataFromUrl(model.url) { (data, response, error)  in
                 guard let data = data, error == nil else { return }
                 let image = UIImage(data: data)
                 DispatchQueue.main.async() { () -> Void in
@@ -123,7 +123,7 @@ public class ModernSearchBarCell: UITableViewCell {
         }
     }
     
-    private func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+    fileprivate func getDataFromUrl(_ url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             
