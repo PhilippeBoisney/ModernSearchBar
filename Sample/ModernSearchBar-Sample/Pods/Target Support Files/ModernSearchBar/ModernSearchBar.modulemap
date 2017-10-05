@@ -1,6 +1,0 @@
-framework module ModernSearchBar {
-  umbrella header "ModernSearchBar-umbrella.h"
-
-  export *
-  module * { export * }
-}
