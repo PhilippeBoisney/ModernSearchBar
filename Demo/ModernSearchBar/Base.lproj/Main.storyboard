@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="coj-5z-FkL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+            <string>Avenir-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="4zE-GK-cWe">
+            <objects>
+                <viewController id="coj-5z-FkL" customClass="ViewController" customModule="ModernSearchBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hs3-Wu-dV5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eh8-q4-UH3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bz9-mV-955">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxr-pU-dkq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="M7w-4i-BGU"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ModernSearchBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf6-Gp-Rao">
+                                <rect key="frame" x="98" y="319" width="178.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The famous iOS searching bar with auto completion feature implemented" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtP-HJ-A2A">
+                                <rect key="frame" x="10" y="363" width="355" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Search something really cool..." translatesAutoresizingMaskIntoConstraints="NO" id="KeY-DR-Psk" customClass="ModernSearchBar" customModule="ModernSearchBar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.70980392160000005" green="0.82352941180000006" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176469999998" green="0.85098039219999999" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xtP-HJ-A2A" secondAttribute="trailing" constant="10" id="03m-9h-A7v"/>
+                            <constraint firstItem="Xf6-Gp-Rao" firstAttribute="centerX" secondItem="Bz9-mV-955" secondAttribute="centerX" id="0lR-qy-SQf"/>
+                            <constraint firstItem="xtP-HJ-A2A" firstAttribute="centerX" secondItem="Bz9-mV-955" secondAttribute="centerX" id="2lZ-9q-bls"/>
+                            <constraint firstItem="Xf6-Gp-Rao" firstAttribute="centerY" secondItem="Bz9-mV-955" secondAttribute="centerY" id="BXO-nO-JmL"/>
+                            <constraint firstItem="KeY-DR-Psk" firstAttribute="top" secondItem="Xxr-pU-dkq" secondAttribute="bottom" id="Ds2-Qp-kZT"/>
+                            <constraint firstItem="Xxr-pU-dkq" firstAttribute="leading" secondItem="Bz9-mV-955" secondAttribute="leading" id="I31-1f-ph7"/>
+                            <constraint firstItem="xtP-HJ-A2A" firstAttribute="leading" secondItem="Bz9-mV-955" secondAttribute="leading" constant="10" id="K7E-JO-faj"/>
+                            <constraint firstAttribute="trailing" secondItem="KeY-DR-Psk" secondAttribute="trailing" id="Ojw-w7-v7t"/>
+                            <constraint firstItem="xtP-HJ-A2A" firstAttribute="top" secondItem="Xf6-Gp-Rao" secondAttribute="bottom" constant="15" id="R9e-wT-M1O"/>
+                            <constraint firstItem="Xxr-pU-dkq" firstAttribute="top" secondItem="Bz9-mV-955" secondAttribute="top" id="cNL-82-yFl"/>
+                            <constraint firstAttribute="trailing" secondItem="Xxr-pU-dkq" secondAttribute="trailing" id="caK-JA-4pU"/>
+                            <constraint firstItem="KeY-DR-Psk" firstAttribute="leading" secondItem="Bz9-mV-955" secondAttribute="leading" id="zei-a3-y9N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JWX-5s-qzG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="MhZ-Zg-1ZX"/>
+                    <connections>
+                        <outlet property="modernSearchBar" destination="KeY-DR-Psk" id="HHT-1k-Jk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcx-Nt-7Y6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="108"/>
+        </scene>
+    </scenes>
+</document>

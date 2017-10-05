@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3716D6FC1F861A4100E78F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D6FB1F861A4100E78F74 /* AppDelegate.swift */; };
+		3716D6FE1F861A4100E78F74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D6FD1F861A4100E78F74 /* ViewController.swift */; };
+		3716D7011F861A4100E78F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3716D6FF1F861A4100E78F74 /* Main.storyboard */; };
+		3716D7031F861A4100E78F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3716D7021F861A4100E78F74 /* Assets.xcassets */; };
+		3716D7061F861A4100E78F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3716D7041F861A4100E78F74 /* LaunchScreen.storyboard */; };
+		3716D7121F861AF800E78F74 /* ModernSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D70D1F861AF700E78F74 /* ModernSearchBarDelegate.swift */; };
+		3716D7131F861AF800E78F74 /* ModernSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D70E1F861AF700E78F74 /* ModernSearchBar.swift */; };
+		3716D7141F861AF800E78F74 /* ModernSearchBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D70F1F861AF700E78F74 /* ModernSearchBarIcon.swift */; };
+		3716D7151F861AF800E78F74 /* ModernSearchBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D7101F861AF700E78F74 /* ModernSearchBarModel.swift */; };
+		3716D7161F861AF800E78F74 /* ModernSearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D7111F861AF800E78F74 /* ModernSearchBarCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3716D6F81F861A4100E78F74 /* ModernSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModernSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3716D6FB1F861A4100E78F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3716D6FD1F861A4100E78F74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3716D7001F861A4100E78F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3716D7021F861A4100E78F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3716D7051F861A4100E78F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3716D7071F861A4100E78F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3716D70D1F861AF700E78F74 /* ModernSearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarDelegate.swift; sourceTree = "<group>"; };
+		3716D70E1F861AF700E78F74 /* ModernSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBar.swift; sourceTree = "<group>"; };
+		3716D70F1F861AF700E78F74 /* ModernSearchBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarIcon.swift; sourceTree = "<group>"; };
+		3716D7101F861AF700E78F74 /* ModernSearchBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarModel.swift; sourceTree = "<group>"; };
+		3716D7111F861AF800E78F74 /* ModernSearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3716D6F51F861A4100E78F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3716D6EF1F861A4100E78F74 = {
+			isa = PBXGroup;
+			children = (
+				3716D6FA1F861A4100E78F74 /* ModernSearchBar */,
+				3716D6F91F861A4100E78F74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3716D6F91F861A4100E78F74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3716D6F81F861A4100E78F74 /* ModernSearchBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3716D6FA1F861A4100E78F74 /* ModernSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				3716D70E1F861AF700E78F74 /* ModernSearchBar.swift */,
+				3716D7111F861AF800E78F74 /* ModernSearchBarCell.swift */,
+				3716D70D1F861AF700E78F74 /* ModernSearchBarDelegate.swift */,
+				3716D70F1F861AF700E78F74 /* ModernSearchBarIcon.swift */,
+				3716D7101F861AF700E78F74 /* ModernSearchBarModel.swift */,
+				3716D6FB1F861A4100E78F74 /* AppDelegate.swift */,
+				3716D6FD1F861A4100E78F74 /* ViewController.swift */,
+				3716D6FF1F861A4100E78F74 /* Main.storyboard */,
+				3716D7021F861A4100E78F74 /* Assets.xcassets */,
+				3716D7041F861A4100E78F74 /* LaunchScreen.storyboard */,
+				3716D7071F861A4100E78F74 /* Info.plist */,
+			);
+			path = ModernSearchBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3716D6F71F861A4100E78F74 /* ModernSearchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3716D70A1F861A4100E78F74 /* Build configuration list for PBXNativeTarget "ModernSearchBar" */;
+			buildPhases = (
+				3716D6F41F861A4100E78F74 /* Sources */,
+				3716D6F51F861A4100E78F74 /* Frameworks */,
+				3716D6F61F861A4100E78F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModernSearchBar;
+			productName = ModernSearchBar;
+			productReference = 3716D6F81F861A4100E78F74 /* ModernSearchBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3716D6F01F861A4100E78F74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = CookMinute;
+				TargetAttributes = {
+					3716D6F71F861A4100E78F74 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3716D6F31F861A4100E78F74 /* Build configuration list for PBXProject "ModernSearchBar" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3716D6EF1F861A4100E78F74;
+			productRefGroup = 3716D6F91F861A4100E78F74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3716D6F71F861A4100E78F74 /* ModernSearchBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3716D6F61F861A4100E78F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3716D7061F861A4100E78F74 /* LaunchScreen.storyboard in Resources */,
+				3716D7031F861A4100E78F74 /* Assets.xcassets in Resources */,
+				3716D7011F861A4100E78F74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3716D6F41F861A4100E78F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3716D7151F861AF800E78F74 /* ModernSearchBarModel.swift in Sources */,
+				3716D7161F861AF800E78F74 /* ModernSearchBarCell.swift in Sources */,
+				3716D7131F861AF800E78F74 /* ModernSearchBar.swift in Sources */,
+				3716D6FE1F861A4100E78F74 /* ViewController.swift in Sources */,
+				3716D7121F861AF800E78F74 /* ModernSearchBarDelegate.swift in Sources */,
+				3716D6FC1F861A4100E78F74 /* AppDelegate.swift in Sources */,
+				3716D7141F861AF800E78F74 /* ModernSearchBarIcon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3716D6FF1F861A4100E78F74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3716D7001F861A4100E78F74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3716D7041F861A4100E78F74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3716D7051F861A4100E78F74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3716D7081F861A4100E78F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3716D7091F861A4100E78F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3716D70B1F861A4100E78F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BBX8TF58T;
+				INFOPLIST_FILE = ModernSearchBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cookminute.ModernSearchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3716D70C1F861A4100E78F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BBX8TF58T;
+				INFOPLIST_FILE = ModernSearchBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cookminute.ModernSearchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3716D6F31F861A4100E78F74 /* Build configuration list for PBXProject "ModernSearchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3716D7081F861A4100E78F74 /* Debug */,
+				3716D7091F861A4100E78F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3716D70A1F861A4100E78F74 /* Build configuration list for PBXNativeTarget "ModernSearchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3716D70B1F861A4100E78F74 /* Debug */,
+				3716D70C1F861A4100E78F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3716D6F01F861A4100E78F74 /* Project object */;
+}
