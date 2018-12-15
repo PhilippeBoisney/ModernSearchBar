@@ -47,12 +47,12 @@ pod 'ModernSearchBar'
 //Import lib on the top of ViewController
 import ModernSearchBar
 
-//Create an IBOutlet from your searchBar
- @IBOutlet weak var modernSearchBar: ModernSearchBar!
-
 //Extend your ViewController with 'ModernSearchBarDelegate'
 class ViewController: UIViewController, ModernSearchBarDelegate
 
+//Create an IBOutlet from your searchBar
+ @IBOutlet weak var modernSearchBar: ModernSearchBar!
+ 
 //Implement the delegation
 self.modernSearchBar.delegateModernSearchBar = self
 
