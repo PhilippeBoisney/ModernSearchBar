@@ -48,8 +48,8 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     public var suggestionsView_maxHeight: CGFloat!
     public var suggestionsView_backgroundColor: UIColor?
     public var suggestionsView_contentViewColor: UIColor?
-    public var suggestionsView_separatorStyle: UITableViewCellSeparatorStyle = .none
-    public var suggestionsView_selectionStyle: UITableViewCellSelectionStyle = UITableViewCellSelectionStyle.none
+    public var suggestionsView_separatorStyle: UITableViewCell.SeparatorStyle = .none
+    public var suggestionsView_selectionStyle: UITableViewCell.SelectionStyle = UITableViewCell.SelectionStyle.none
     public var suggestionsView_verticalSpaceWithSearchBar: CGFloat = 3
     
     public var suggestionsView_searchIcon_height: CGFloat = 17
@@ -90,7 +90,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
         self.suggestionsView.delegate = self
         self.suggestionsView.dataSource = self
         self.suggestionsView.register(ModernSearchBarCell.self, forCellReuseIdentifier: "cell")
-        self.suggestionsView.rowHeight = UITableViewAutomaticDimension
+        self.suggestionsView.rowHeight = UITableView.automaticDimension
         self.suggestionsView.estimatedRowHeight = 100
         self.suggestionsView.separatorStyle = self.suggestionsView_separatorStyle
         if let backgroundColor = suggestionsView_backgroundColor { self.suggestionsView.backgroundColor = backgroundColor }
@@ -495,13 +495,13 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // ---------------
     
     private func interceptKeyboardChange(){
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
         let userInfo = notification.userInfo as! [String: NSObject] as NSDictionary
-        let keyboardFrame = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! CGRect
+        let keyboardFrame = userInfo.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! CGRect
         let keyboardHeight = keyboardFrame.height
         
         self.keyboardHeight = keyboardHeight
@@ -516,7 +516,7 @@ public class ModernSearchBar: UISearchBar, UISearchBarDelegate, UITableViewDataS
     // ---------------
     
     private func interceptMemoryWarning(){
-        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveMemoryWarning(notification:)), name: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveMemoryWarning(notification:)), name: UIApplication.didReceiveMemoryWarningNotification, object: nil)
     }
     
     @objc private func didReceiveMemoryWarning(notification: NSNotification) {
