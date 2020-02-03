@@ -12,11 +12,11 @@
 		3716D7011F861A4100E78F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3716D6FF1F861A4100E78F74 /* Main.storyboard */; };
 		3716D7031F861A4100E78F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3716D7021F861A4100E78F74 /* Assets.xcassets */; };
 		3716D7061F861A4100E78F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3716D7041F861A4100E78F74 /* LaunchScreen.storyboard */; };
-		3716D7121F861AF800E78F74 /* ModernSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D70D1F861AF700E78F74 /* ModernSearchBarDelegate.swift */; };
-		3716D7131F861AF800E78F74 /* ModernSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D70E1F861AF700E78F74 /* ModernSearchBar.swift */; };
-		3716D7141F861AF800E78F74 /* ModernSearchBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D70F1F861AF700E78F74 /* ModernSearchBarIcon.swift */; };
-		3716D7151F861AF800E78F74 /* ModernSearchBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D7101F861AF700E78F74 /* ModernSearchBarModel.swift */; };
-		3716D7161F861AF800E78F74 /* ModernSearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716D7111F861AF800E78F74 /* ModernSearchBarCell.swift */; };
+		94B2F64523E85B2A008B55AB /* ModernSearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F64023E85B2A008B55AB /* ModernSearchBarCell.swift */; };
+		94B2F64623E85B2A008B55AB /* ModernSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F64123E85B2A008B55AB /* ModernSearchBarDelegate.swift */; };
+		94B2F64723E85B2A008B55AB /* ModernSearchBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F64223E85B2A008B55AB /* ModernSearchBarModel.swift */; };
+		94B2F64823E85B2A008B55AB /* ModernSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F64323E85B2A008B55AB /* ModernSearchBar.swift */; };
+		94B2F64923E85B2A008B55AB /* ModernSearchBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F64423E85B2A008B55AB /* ModernSearchBarIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +27,11 @@
 		3716D7021F861A4100E78F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3716D7051F861A4100E78F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3716D7071F861A4100E78F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3716D70D1F861AF700E78F74 /* ModernSearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarDelegate.swift; sourceTree = "<group>"; };
-		3716D70E1F861AF700E78F74 /* ModernSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBar.swift; sourceTree = "<group>"; };
-		3716D70F1F861AF700E78F74 /* ModernSearchBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarIcon.swift; sourceTree = "<group>"; };
-		3716D7101F861AF700E78F74 /* ModernSearchBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarModel.swift; sourceTree = "<group>"; };
-		3716D7111F861AF800E78F74 /* ModernSearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernSearchBarCell.swift; sourceTree = "<group>"; };
+		94B2F64023E85B2A008B55AB /* ModernSearchBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModernSearchBarCell.swift; path = ../../Pod/Classes/ModernSearchBarCell.swift; sourceTree = "<group>"; };
+		94B2F64123E85B2A008B55AB /* ModernSearchBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModernSearchBarDelegate.swift; path = ../../Pod/Classes/ModernSearchBarDelegate.swift; sourceTree = "<group>"; };
+		94B2F64223E85B2A008B55AB /* ModernSearchBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModernSearchBarModel.swift; path = ../../Pod/Classes/ModernSearchBarModel.swift; sourceTree = "<group>"; };
+		94B2F64323E85B2A008B55AB /* ModernSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModernSearchBar.swift; path = ../../Pod/Classes/ModernSearchBar.swift; sourceTree = "<group>"; };
+		94B2F64423E85B2A008B55AB /* ModernSearchBarIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModernSearchBarIcon.swift; path = ../../Pod/Classes/ModernSearchBarIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +64,11 @@
 		3716D6FA1F861A4100E78F74 /* ModernSearchBar */ = {
 			isa = PBXGroup;
 			children = (
-				3716D70E1F861AF700E78F74 /* ModernSearchBar.swift */,
-				3716D7111F861AF800E78F74 /* ModernSearchBarCell.swift */,
-				3716D70D1F861AF700E78F74 /* ModernSearchBarDelegate.swift */,
-				3716D70F1F861AF700E78F74 /* ModernSearchBarIcon.swift */,
-				3716D7101F861AF700E78F74 /* ModernSearchBarModel.swift */,
+				94B2F64323E85B2A008B55AB /* ModernSearchBar.swift */,
+				94B2F64023E85B2A008B55AB /* ModernSearchBarCell.swift */,
+				94B2F64123E85B2A008B55AB /* ModernSearchBarDelegate.swift */,
+				94B2F64423E85B2A008B55AB /* ModernSearchBarIcon.swift */,
+				94B2F64223E85B2A008B55AB /* ModernSearchBarModel.swift */,
 				3716D6FB1F861A4100E78F74 /* AppDelegate.swift */,
 				3716D6FD1F861A4100E78F74 /* ViewController.swift */,
 				3716D6FF1F861A4100E78F74 /* Main.storyboard */,
@@ -152,13 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3716D7151F861AF800E78F74 /* ModernSearchBarModel.swift in Sources */,
-				3716D7161F861AF800E78F74 /* ModernSearchBarCell.swift in Sources */,
-				3716D7131F861AF800E78F74 /* ModernSearchBar.swift in Sources */,
+				94B2F64723E85B2A008B55AB /* ModernSearchBarModel.swift in Sources */,
+				94B2F64923E85B2A008B55AB /* ModernSearchBarIcon.swift in Sources */,
+				94B2F64523E85B2A008B55AB /* ModernSearchBarCell.swift in Sources */,
+				94B2F64823E85B2A008B55AB /* ModernSearchBar.swift in Sources */,
 				3716D6FE1F861A4100E78F74 /* ViewController.swift in Sources */,
-				3716D7121F861AF800E78F74 /* ModernSearchBarDelegate.swift in Sources */,
 				3716D6FC1F861A4100E78F74 /* AppDelegate.swift in Sources */,
-				3716D7141F861AF800E78F74 /* ModernSearchBarIcon.swift in Sources */,
+				94B2F64623E85B2A008B55AB /* ModernSearchBarDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
